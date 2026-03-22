@@ -46,6 +46,7 @@ model Category {
 enum MovieStatus {
   assistido
   na_fila
+  proximo
 }
 
 model Movie {
@@ -71,6 +72,7 @@ enum BookStatus {
   lido
   lendo
   na_fila
+  proximo
 }
 
 model Book {
@@ -97,6 +99,7 @@ enum SeriesStatus {
   assistindo
   finalizada
   na_fila
+  proximo
 }
 
 model Series {

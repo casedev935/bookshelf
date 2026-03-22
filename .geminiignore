@@ -49,3 +49,6 @@ public/
 packages/prisma/enrich_movies.ts
 packages/prisma/import_movies.ts
 packages/prisma/import_books.ts
+
+# Contexto Desnecessário
+.contexto

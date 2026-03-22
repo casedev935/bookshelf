@@ -1,0 +1,48 @@
+# ==============================
+# Git
+# ==============================
+.git/
+.gitignore
+
+# ==============================
+# Node
+# ==============================
+node_modules/
+**/node_modules/
+
+# ==============================
+# Build outputs (recriados no build da imagem)
+# ==============================
+dist/
+.next/
+out/
+build/
+coverage/
+
+# ==============================
+# Environment — injetado em runtime
+# ==============================
+.env
+.env.*
+
+# ==============================
+# Cache & Dev tools
+# ==============================
+.turbo/
+.DS_Store
+*.pem
+*.log
+
+# ==============================
+# Dados locais
+# ==============================
+backups/
+*.sqlite
+*.db
+
+# ==============================
+# Docs e configs de CI (não precisam na imagem)
+# ==============================
+*.md
+.agent/
+.contexto/

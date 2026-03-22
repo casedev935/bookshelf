@@ -1,0 +1,51 @@
+# ==============================
+# .geminiignore
+# Exclui arquivos grandes/irrelevantes do contexto do Gemini
+# para reduzir consumo de tokens.
+# ==============================
+
+# Dependências — nunca relevantes
+node_modules/
+**/node_modules/
+
+# Lock files — muito grandes, não ajudam
+pnpm-lock.yaml
+*.lock
+package-lock.json
+yarn.lock
+
+# Builds & cache
+dist/
+.next/
+.turbo/
+out/
+build/
+coverage/
+
+# Dados locais e backups
+backups/
+*.sqlite
+*.db
+
+# Assets binários
+public/
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.svg
+**/*.ico
+**/*.woff
+**/*.woff2
+**/*.ttf
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Scripts de enriquecimento de dados (scripts utilitários one-off)
+packages/prisma/enrich_movies.ts
+packages/prisma/import_movies.ts
+packages/prisma/import_books.ts

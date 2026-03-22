@@ -1,0 +1,29 @@
+services:
+  database:
+    image: postgres:15-alpine
+    container_name: bookshelf-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+      POSTGRES_DB: ${DB_NAME:-bookshelf}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: bookshelf-adminer
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+  # To be created and configured in the future:
+  # api: ...
+  # web: ...
+  # nginx: ...
+
+volumes:
+  postgres_data:

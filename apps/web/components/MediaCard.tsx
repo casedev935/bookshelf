@@ -8,7 +8,7 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
     <span className={`text-[10px] font-mono font-black px-2 py-1 border-2 border-black tracking-widest whitespace-nowrap ${
       media.status === 'assistido' || media.status === 'lido' || media.status === 'finalizada' ? 'bg-[var(--color-status-success)] text-black' :
       media.status === 'na_fila' ? 'bg-[var(--color-status-queue)] text-black' :
-      media.status === 'proximo' ? 'bg-[var(--color-status-next)] text-black' :
+      media.status === 'proximo' ? 'bg-[var(--color-status-next)] text-white' :
       'bg-[var(--color-status-ongoing)] text-white'
     }`}>
       {media.status?.replace('_', ' ').toUpperCase() || 'UNKNOWN'}

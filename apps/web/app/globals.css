@@ -5,9 +5,9 @@
   --color-text-primary: #1e293b;
   --color-accent: #137fec;
   --color-status-success: #22c55e;
-  --color-status-ongoing: #3b82f6;
+  --color-status-ongoing: #8b5cf6;
   --color-status-queue: #f97316;
-  --color-status-next: #facc15;
+  --color-status-next: #0047ab;
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains);

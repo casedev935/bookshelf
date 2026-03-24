@@ -72,11 +72,9 @@ export default function Dashboard() {
 
   return (
     <div className="flex flex-col h-full bg-[var(--color-background-primary)]">
-      <Header title="Analytics Dashboard" />
-      
-      <div className="flex-1 p-6 md:p-12 max-w-7xl mx-auto w-full">
+      <div className="flex-1 p-6 md:pt-4 md:px-12 md:pb-12 max-w-7xl mx-auto w-full">
         {/* Movies Section */}
-        <h2 className="text-2xl font-black mb-6 uppercase border-b-4 border-black inline-block pr-8">Movies Intelligence</h2>
+        <h2 className="text-base font-black mb-4 uppercase border-b-2 border-black inline-block pr-6">Movies Intelligence</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <StatCard title="Movies Watched" value={stats.moviesWatched} colorClass="bg-[var(--color-status-success)] text-black" />
           <StatCard title="Next Movies" value={stats.moviesNext} colorClass="bg-[var(--color-status-next)] text-white" />
@@ -84,7 +82,7 @@ export default function Dashboard() {
         </div>
 
         {/* Books Section */}
-        <h2 className="text-2xl font-black mb-6 uppercase border-b-4 border-black inline-block pr-8">Books Intelligence</h2>
+        <h2 className="text-base font-black mb-4 uppercase border-b-2 border-black inline-block pr-6">Books Intelligence</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <StatCard title="Books Read" value={stats.booksRead} colorClass="bg-[var(--color-status-success)] text-black" />
           <StatCard title="Books Reading" value={stats.booksReading} colorClass="bg-[var(--color-status-ongoing)] text-white" />
@@ -93,7 +91,7 @@ export default function Dashboard() {
         </div>
 
         {/* Series Section */}
-        <h2 className="text-2xl font-black mb-6 uppercase border-b-4 border-black inline-block pr-8">Series Intelligence</h2>
+        <h2 className="text-base font-black mb-4 uppercase border-b-2 border-black inline-block pr-6">Series Intelligence</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <StatCard title="Series Finished" value={stats.seriesFinished} colorClass="bg-[var(--color-status-success)] text-black" />
           <StatCard title="Series Watching" value={stats.seriesWatching} colorClass="bg-[var(--color-status-ongoing)] text-white" />

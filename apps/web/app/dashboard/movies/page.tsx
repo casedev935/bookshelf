@@ -72,6 +72,11 @@ export default function MoviesPage() {
     fetchMedia();
   };
 
+  const uniqueDirectors = useMemo(() => {
+    const directors = movies.map(m => m.director).filter(Boolean);
+    return Array.from(new Set(directors)).sort();
+  }, [movies]);
+
   const filteredMovies = useMemo(() =>
     movies.filter(m => {
       const matchTitle = m.title.toLowerCase().includes(filterTitle.toLowerCase());
@@ -101,7 +106,19 @@ export default function MoviesPage() {
             </div>
             <div className="flex flex-col gap-1">
               <label className="text-[10px] font-black uppercase tracking-wider ml-1">Director</label>
-              <input type="text" placeholder="Director" className="neo-brutalist-input py-2 text-sm" value={filterDirector} onChange={e => setFilterDirector(e.target.value)} />
+              <input 
+                type="text" 
+                list="directors-list"
+                placeholder="Director" 
+                className="neo-brutalist-input py-2 text-sm" 
+                value={filterDirector} 
+                onChange={e => setFilterDirector(e.target.value)} 
+              />
+              <datalist id="directors-list">
+                {uniqueDirectors.map(d => (
+                  <option key={d} value={d} />
+                ))}
+              </datalist>
             </div>
             <div className="flex flex-col gap-1">
               <label className="text-[10px] font-black uppercase tracking-wider ml-1">Category</label>

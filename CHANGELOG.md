@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/casedev935/bookshelf/compare/v1.1.0...v1.2.0) (2026-03-24)
+
+
+### Features
+
+* nova busca do diretor ([f77a6a1](https://github.com/casedev935/bookshelf/commit/f77a6a1685b9e39097f3e003880d8da635021f6b))
+
 ## [1.1.0](https://github.com/casedev935/bookshelf/compare/v1.0.0...v1.1.0) (2026-03-24)
 
 

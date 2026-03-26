@@ -5,13 +5,12 @@
   "main": "index.ts",
   "types": "index.ts",
   "dependencies": {
-    "@prisma/client": "^5.11.0"
-  },
-  "devDependencies": {
+    "@prisma/client": "^5.11.0",
     "prisma": "^5.11.0"
   },
   "scripts": {
     "generate": "prisma generate",
-    "db:push": "prisma db push"
+    "db:push": "prisma db push",
+    "postinstall": "prisma generate"
   }
 }

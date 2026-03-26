@@ -20,10 +20,27 @@ services:
       - "8080:8080"
     depends_on:
       - database
-  # To be created and configured in the future:
-  # api: ...
-  # web: ...
-  # nginx: ...
+  api:
+    image: ghcr.io/casedev935/bookshelf/api:latest
+    container_name: bookshelf-api
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://${DB_USER}:${DB_PASSWORD}@database:5432/${DB_NAME}?schema=public
+      JWT_SECRET: ${JWT_SECRET}
+      PORT: 3001
+    ports:
+      - "3001:3001"
+    depends_on:
+      - database
+
+  web:
+    image: ghcr.io/casedev935/bookshelf/web:latest
+    container_name: bookshelf-web
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
 
 volumes:
   postgres_data:

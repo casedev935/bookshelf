@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/casedev935/bookshelf/compare/v1.2.0...v1.2.1) (2026-03-26)
+
+
+### Bug Fixes
+
+* lista púbica agora está igual a lista privada ([0019477](https://github.com/casedev935/bookshelf/commit/001947769224b962c4da095f53f62b58d7364e36))
+
 ## [1.2.0](https://github.com/casedev935/bookshelf/compare/v1.1.0...v1.2.0) (2026-03-24)
 
 

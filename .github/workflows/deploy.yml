@@ -72,15 +72,17 @@ jobs:
             mkdir -p ~/bookshelf
             cd ~/bookshelf
             
-            # Create/Update .env file
-            echo "DB_USER=\"${{ secrets.DB_USER }}\"" > .env
-            echo "DB_PASSWORD=\"${{ secrets.DB_PASSWORD }}\"" >> .env
-            echo "DB_NAME=\"${{ secrets.DB_NAME }}\"" >> .env
-            echo "DATABASE_URL=\"postgresql://${{ secrets.DB_USER }}:${{ secrets.DB_PASSWORD }}@database:5432/${{ secrets.DB_NAME }}?schema=public\"" >> .env
-            echo "JWT_SECRET=\"${{ secrets.JWT_SECRET }}\"" >> .env
-            echo "GITHUB_REPOSITORY=\"${{ github.repository }}\"" >> .env
-            echo "TMDB_API_KEY=\"${{ secrets.TMDB_API_KEY }}\"" >> .env
-            echo "TMDB_BASE_URL=\"https://api.themoviedb.org/3\"" >> .env
+            # Create/Update .env file using a shell-safe heredoc
+            cat << 'EOF' > .env
+DB_USER="${{ secrets.DB_USER }}"
+DB_PASSWORD="${{ secrets.DB_PASSWORD }}"
+DB_NAME="${{ secrets.DB_NAME }}"
+DATABASE_URL="postgresql://${{ secrets.DB_USER }}:${{ secrets.DB_PASSWORD }}@database:5432/${{ secrets.DB_NAME }}?schema=public"
+JWT_SECRET="${{ secrets.JWT_SECRET }}"
+GITHUB_REPOSITORY="${{ github.repository }}"
+TMDB_API_KEY="${{ secrets.TMDB_API_KEY }}"
+TMDB_BASE_URL="https://api.themoviedb.org/3"
+EOF
             
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker compose pull

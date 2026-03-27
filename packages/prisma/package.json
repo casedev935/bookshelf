@@ -15,12 +15,8 @@
   },
   "scripts": {
     "generate": "prisma generate",
-<<<<<<< HEAD
     "build": "prisma generate",
+    "postinstall": "prisma generate",
     "db:push": "prisma db push"
-=======
-    "db:push": "prisma db push",
-    "postinstall": "prisma generate"
->>>>>>> 4622afc59921e27df4e30515bb4a3785165b6f7c
   }
 }

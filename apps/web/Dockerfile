@@ -1,23 +1,27 @@
-# Base node image
-FROM node:20-alpine AS base
-RUN npm install -g pnpm
+FROM node:20-slim AS base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN apt-get update && apt-get install -y openssl && rm -rf /var/lib/apt/lists/*
+RUN corepack enable
 
-# Install all dependencies and build
 FROM base AS builder
 WORKDIR /app
-ARG NEXT_PUBLIC_API_URL
-ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+RUN npm install -g turbo
 COPY . .
 RUN pnpm install --frozen-lockfile
-RUN pnpm --filter web build
+RUN pnpm --filter=@media-manager/prisma run build
 
-# Production image
-FROM node:20-alpine AS runner
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+
+RUN turbo build --filter=web...
+
+FROM base AS runner
 WORKDIR /app
 ENV NODE_ENV=production
+ENV HOSTNAME=0.0.0.0
+ENV PORT=3000
 
-# Copy standalone build
-# Note: Next.js standalone when in monorepo often puts server.js in /app/apps/web/server.js
 COPY --from=builder /app/apps/web/public ./apps/web/public
 COPY --from=builder /app/apps/web/.next/standalone ./
 COPY --from=builder /app/apps/web/.next/static ./apps/web/.next/static

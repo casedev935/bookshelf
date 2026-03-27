@@ -73,16 +73,16 @@ jobs:
             cd ~/bookshelf
             
             # Create/Update .env file using a shell-safe heredoc
-            cat << 'EOF' > .env
-DB_USER="${{ secrets.DB_USER }}"
-DB_PASSWORD="${{ secrets.DB_PASSWORD }}"
-DB_NAME="${{ secrets.DB_NAME }}"
-DATABASE_URL="postgresql://${{ secrets.DB_USER }}:${{ secrets.DB_PASSWORD }}@database:5432/${{ secrets.DB_NAME }}?schema=public"
-JWT_SECRET="${{ secrets.JWT_SECRET }}"
-GITHUB_REPOSITORY="${{ github.repository }}"
-TMDB_API_KEY="${{ secrets.TMDB_API_KEY }}"
-TMDB_BASE_URL="https://api.themoviedb.org/3"
-EOF
+            cat << 'EOF' | sed 's/^[[:space:]]*//' > .env
+            DB_USER="${{ secrets.DB_USER }}"
+            DB_PASSWORD="${{ secrets.DB_PASSWORD }}"
+            DB_NAME="${{ secrets.DB_NAME }}"
+            DATABASE_URL="postgresql://${{ secrets.DB_USER }}:${{ secrets.DB_PASSWORD }}@database:5432/${{ secrets.DB_NAME }}?schema=public"
+            JWT_SECRET="${{ secrets.JWT_SECRET }}"
+            GITHUB_REPOSITORY="${{ github.repository }}"
+            TMDB_API_KEY="${{ secrets.TMDB_API_KEY }}"
+            TMDB_BASE_URL="https://api.themoviedb.org/3"
+            EOF
             
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker compose pull

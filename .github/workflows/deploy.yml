@@ -43,7 +43,7 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_WEB }}:latest
           build-args: |
-            NEXT_PUBLIC_API_URL=http://${{ secrets.VPS_IP }}:3001/api
+            NEXT_PUBLIC_API_URL=https://api-bookshelf.mediamanager.tech
 
   deploy:
     needs: build-and-push
@@ -68,7 +68,18 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
+            mkdir -p ~/bookshelf
             cd ~/bookshelf
+            
+            # Create/Update .env file
+            echo "DB_USER=${{ secrets.DB_USER }}" > .env
+            echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
+            echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
+            echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+            echo "GITHUB_REPOSITORY=${{ github.repository }}" >> .env
+            echo "TMDB_API_KEY=${{ secrets.TMDB_API_KEY }}" >> .env
+            echo "TMDB_BASE_URL=https://api.themoviedb.org/3" >> .env
+            
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker compose pull
             docker compose up -d

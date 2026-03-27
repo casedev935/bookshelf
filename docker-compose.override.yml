@@ -1,0 +1,26 @@
+services:
+  api:
+    image: bookshelf-api:local
+    build:
+      context: .
+      dockerfile: ./apps/api/Dockerfile
+    ports:
+      - "3001:3001"
+    networks:
+      - default
+
+  web:
+    image: bookshelf-web:local
+    build:
+      context: .
+      dockerfile: ./apps/web/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3001
+    networks:
+      - default
+
+networks:
+  gateway_network:
+    external: false

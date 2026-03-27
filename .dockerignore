@@ -14,10 +14,15 @@ node_modules/
 # Build outputs (recriados no build da imagem)
 # ==============================
 dist/
+**/dist/
 .next/
+**/.next/
 out/
+**/out/
 build/
+**/build/
 coverage/
+**/coverage/
 
 # ==============================
 # Environment — injetado em runtime

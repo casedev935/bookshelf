@@ -1,21 +1,26 @@
-# Este arquivo sobrescreve as configurações do docker-compose.yml para desenvolvimento LOCAL.
-# Ele permite que você use o comando 'docker compose up --build' para construir as imagens a partir do seu código atual.
-
 services:
   api:
+    image: bookshelf-api:local
     build:
       context: .
       dockerfile: ./apps/api/Dockerfile
-    image: bookshelf-api:local
-    environment:
-      # Sobrescreve para usar o banco de dados rodando no container
-      DATABASE_URL: postgresql://${DB_USER}:${DB_PASSWORD}@database:5432/${DB_NAME}?schema=public
+    ports:
+      - "3001:3001"
+    networks:
+      - default
 
   web:
+    image: bookshelf-web:local
     build:
       context: .
       dockerfile: ./apps/web/Dockerfile
-      args:
-        # Para o navegador acessar localmente, deve usar localhost, não o nome do serviço docker.
-        NEXT_PUBLIC_API_URL: http://localhost:3001/api
-    image: bookshelf-web:local
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3001
+    networks:
+      - default
+
+networks:
+  gateway_network:
+    external: false

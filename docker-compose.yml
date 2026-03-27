@@ -21,26 +21,39 @@ services:
     depends_on:
       - database
   api:
-    image: ghcr.io/casedev935/bookshelf/api:latest
+    image: ghcr.io/${GITHUB_REPOSITORY}/api:latest
     container_name: bookshelf-api
     restart: always
     environment:
       DATABASE_URL: postgresql://${DB_USER}:${DB_PASSWORD}@database:5432/${DB_NAME}?schema=public
       JWT_SECRET: ${JWT_SECRET}
-      PORT: 3001
-    ports:
-      - "3001:3001"
-    depends_on:
-      - database
+    networks:
+      - default
+      - gateway_network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.bookshelf-api.rule=Host(`api-bookshelf.mediamanager.tech`)"
+      - "traefik.http.routers.bookshelf-api.entrypoints=websecure"
+      - "traefik.http.routers.bookshelf-api.tls.certresolver=myresolver"
+      - "traefik.http.services.bookshelf-api.loadbalancer.server.port=3001"
 
   web:
-    image: ghcr.io/casedev935/bookshelf/web:latest
+    image: ghcr.io/${GITHUB_REPOSITORY}/web:latest
     container_name: bookshelf-web
     restart: always
-    ports:
-      - "3000:3000"
-    depends_on:
-      - api
+    networks:
+      - default
+      - gateway_network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.bookshelf-web.rule=Host(`bookshelf.mediamanager.tech`)"
+      - "traefik.http.routers.bookshelf-web.entrypoints=websecure"
+      - "traefik.http.routers.bookshelf-web.tls.certresolver=myresolver"
+      - "traefik.http.services.bookshelf-web.loadbalancer.server.port=3000"
+
+networks:
+  gateway_network:
+    external: true
 
 volumes:
   postgres_data:

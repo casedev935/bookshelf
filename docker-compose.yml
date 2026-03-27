@@ -25,7 +25,7 @@ services:
     container_name: bookshelf-api
     restart: always
     environment:
-      - DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@database:5432/${DB_NAME}?schema=public
+      - DATABASE_URL=${DATABASE_URL}
       - JWT_SECRET=${JWT_SECRET}
       - TMDB_API_KEY=${TMDB_API_KEY}
       - TMDB_BASE_URL=${TMDB_BASE_URL}

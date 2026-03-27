@@ -62,4 +62,4 @@ backups/
 # ==============================
 # Misc
 # ==============================
-.vercel
+.verceldocker-compose.override.yml

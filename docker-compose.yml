@@ -29,7 +29,7 @@ services:
       - JWT_SECRET=${JWT_SECRET}
       - TMDB_API_KEY=${TMDB_API_KEY}
       - TMDB_BASE_URL=${TMDB_BASE_URL}
-      - NEXT_PUBLIC_API_URL=https://api-bookshelf.mediamanager.tech
+      - NEXT_PUBLIC_API_URL=https://api-bookshelf.mediamanager.tech/api
     networks:
       - default
       - gateway_network

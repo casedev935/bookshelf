@@ -43,8 +43,7 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_WEB }}:latest
           build-args: |
-            NEXT_PUBLIC_API_URL=https://api-bookshelf.mediamanager.tech
-
+            NEXT_PUBLIC_API_URL=https://api-bookshelf.mediamanager.tech/api
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest

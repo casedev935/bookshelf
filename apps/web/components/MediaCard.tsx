@@ -4,8 +4,10 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
   const isRow = layoutMode === 'row';
   const imageUrl = media.poster_url || media.cover_url;
 
+  // Neo-brutalist text-black forces black text on badges, but in dark mode we might want to respect it if the badge background is light.
+  // We'll let the color utils handle it, or force specific status background classes and text-black for light badges.
   const statusBadge = (
-    <span className={`text-[10px] font-mono font-black px-2 py-1 border-2 border-black tracking-widest whitespace-nowrap ${
+    <span className={`text-[10px] font-mono font-black px-2 py-1 border-2 border-[var(--color-text-primary)] tracking-widest whitespace-nowrap ${
       media.status === 'assistido' || media.status === 'lido' || media.status === 'finalizada' ? 'bg-[var(--color-status-success)] text-black' :
       media.status === 'na_fila' ? 'bg-[var(--color-status-queue)] text-black' :
       media.status === 'proximo' ? 'bg-[var(--color-status-next)] text-white' :
@@ -17,7 +19,7 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
 
   const categoryBadge = media.category?.name ? (
     <span 
-      className="text-[10px] font-mono font-black px-2 py-1 border-2 border-black tracking-widest whitespace-nowrap uppercase"
+      className="text-[10px] font-mono font-black px-2 py-1 border-2 border-[var(--color-text-primary)] tracking-widest whitespace-nowrap uppercase text-black"
       style={{ backgroundColor: getCategoryColor(media.category.name) }}
     >
       {media.category.name}
@@ -25,10 +27,10 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
   ) : null;
 
   const actionButtons = isReadOnly ? null : (
-    <div className={`flex gap-2 transition-opacity ${isRow ? 'opacity-100 flex-row justify-end' : 'mt-auto pt-2 border-t-2 border-black md:opacity-0 group-hover:opacity-100'}`}>
+    <div className={`flex gap-2 transition-opacity ${isRow ? 'opacity-100 flex-row justify-end' : 'mt-auto pt-2 border-t-2 border-[var(--color-text-primary)] md:opacity-0 group-hover:opacity-100'}`}>
       <button
         onClick={() => onEdit(media)}
-        className="neo-brutalist-button-secondary p-2 flex items-center justify-center hover:bg-blue-50 hover:border-blue-600 transition-colors flex-1 md:flex-none"
+        className="neo-brutalist-button-secondary p-2 flex items-center justify-center flex-1 md:flex-none"
         title="Edit"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -38,7 +40,7 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
       </button>
       <button
         onClick={() => onDelete(media.id)}
-        className="neo-brutalist-button p-2 flex items-center justify-center bg-red-500 text-white border-2 border-black hover:bg-red-700 transition-colors flex-1 md:flex-none"
+        className="neo-brutalist-button p-2 flex items-center justify-center bg-red-500 text-white flex-1 md:flex-none"
         title="Delete"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -55,24 +57,39 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
   /* ─── ROW MODE ─── */
   if (isRow) {
     return (
-      <div className="neo-brutalist flex flex-col md:flex-row items-start md:items-center bg-white p-3 gap-3 group w-full">
+      <div className="neo-brutalist flex flex-row items-center p-2 sm:p-3 gap-2 sm:gap-3 group w-full">
         {/* Poster Thumbnail */}
         {imageUrl ? (
-          <img src={imageUrl} alt={media.title} className="w-[72px] h-24 object-cover border-2 border-black shrink-0" />
+          <img src={imageUrl} alt={media.title} className="w-[48px] h-16 sm:w-[72px] sm:h-24 object-cover border-2 border-[var(--color-text-primary)] shrink-0" />
         ) : (
-          <div className="w-[72px] h-24 bg-gray-200 border-2 border-black flex items-center justify-center text-gray-400 text-[10px] font-mono shrink-0">N/A</div>
+          <div className="w-[48px] h-16 sm:w-[72px] sm:h-24 bg-[var(--color-background-primary)] border-2 border-[var(--color-text-primary)] flex items-center justify-center text-gray-400 text-[10px] font-mono shrink-0">N/A</div>
         )}
 
-        {/* Title */}
-        <h3 className="font-black uppercase truncate font-sans text-base md:w-56 lg:w-72 shrink-0" title={media.title}>
-          {media.title}
-        </h3>
+        {/* Info Container */}
+        <div className="flex flex-col flex-1 min-w-0 justify-center">
+            {/* Title */}
+            <h3 className="font-black uppercase truncate font-sans text-sm sm:text-base w-full" title={media.title}>
+              {media.title}
+            </h3>
+            
+            {/* Mobile-only subtitle (Year + Author) */}
+            <div className="sm:hidden text-xs truncate text-gray-500 font-sans opacity-80 flex gap-1">
+                <span>{media.release_year || '-'}</span>
+                <span>•</span>
+                <span className="truncate">{media.director || media.author || '-'}</span>
+            </div>
 
-        {/* Meta */}
-        <div className="flex flex-row items-center gap-4 md:gap-8 flex-1 text-sm font-sans">
+            {/* Badges - visible always, but smaller gap on mobile */}
+            <div className="flex items-center gap-1 sm:gap-2 mt-1 sm:mt-0 flex-wrap">
+                {statusBadge}
+                {categoryBadge}
+            </div>
+        </div>
+
+        {/* Meta (Tablet/Desktop only) */}
+        <div className="hidden sm:flex flex-row items-center gap-4 md:gap-8 text-sm font-sans pl-2">
           <p className="w-12 truncate" title={`Release Year: ${media.release_year || '-'}`}>{media.release_year || '-'}</p>
           <p className="w-28 lg:w-40 truncate" title={`${media.mediaType === 'book' ? 'Author' : 'Director'}: ${media.director || media.author || '-'}`}>{media.director || media.author || '-'}</p>
-          {categoryBadge}
           {media.watched_at && (
             <p className="text-xs text-gray-500 font-mono hidden lg:block">📅 {new Date(media.watched_at).toLocaleDateString('pt-BR')}</p>
           )}
@@ -84,23 +101,21 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
           )}
         </div>
 
-        {statusBadge}
-
-        <div className="w-24 flex justify-end">{actionButtons}</div>
+        {actionButtons && <div className="hidden sm:flex w-24 justify-end shrink-0">{actionButtons}</div>}
       </div>
     );
   }
 
   /* ─── GRID MODE ─── */
   return (
-    <div className="neo-brutalist flex flex-col bg-white relative group w-full overflow-hidden">
+    <div className="neo-brutalist flex flex-col relative group w-full overflow-hidden">
       {/* Poster Image */}
       {imageUrl ? (
-        <div className="w-full h-52 overflow-hidden border-b-2 border-black">
-          <img src={imageUrl} alt={media.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+        <div className="w-full h-40 sm:h-52 overflow-hidden border-b-2 border-[var(--color-text-primary)]">
+          <img src={imageUrl} alt={media.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
         </div>
       ) : (
-        <div className="w-full h-32 bg-gray-100 border-b-2 border-black flex items-center justify-center text-gray-300">
+        <div className="w-full h-40 sm:h-52 bg-[var(--color-background-primary)] border-b-2 border-[var(--color-text-primary)] flex items-center justify-center text-[var(--color-text-primary)] opacity-50">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
             <circle cx="8.5" cy="8.5" r="1.5"/>
@@ -109,16 +124,16 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
         </div>
       )}
 
-      <div className="p-4 flex flex-col gap-2 flex-1">
+      <div className="p-3 sm:p-4 flex flex-col gap-2 flex-1">
         {/* Title Only */}
-        <div className="border-b-2 border-black pb-2">
-          <h3 className="font-black text-base leading-tight uppercase truncate font-sans" title={media.title}>
+        <div className="border-b-2 border-[var(--color-text-primary)] pb-2">
+          <h3 className="font-black text-sm sm:text-base leading-tight uppercase truncate font-sans" title={media.title}>
             {media.title}
           </h3>
         </div>
 
         {/* Details */}
-        <div className="text-sm font-sans flex-1">
+        <div className="text-xs sm:text-sm font-sans flex-1">
           <p><strong>YEAR:</strong> {media.release_year || 'N/A'}</p>
           <p className="truncate" title={`${media.mediaType === 'book' ? 'Author' : 'Director'}: ${media.director || media.author || '-'}`}><strong>{media.mediaType === 'book' ? 'AUTHOR' : 'DIRECTOR'}:</strong> {media.director || media.author || 'N/A'}</p>
           <div className="mt-2 flex flex-wrap gap-2">
@@ -126,10 +141,10 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
             {statusBadge}
           </div>
           {media.watched_at && (
-            <p className="mt-1 text-xs text-gray-500 font-mono">📅 {new Date(media.watched_at).toLocaleDateString('pt-BR')}</p>
+            <p className="mt-1 text-[10px] sm:text-xs text-gray-500 font-mono">📅 {new Date(media.watched_at).toLocaleDateString('pt-BR')}</p>
           )}
           {media.started_reading_at && (
-            <p className="mt-1 text-xs text-gray-500 font-mono">
+            <p className="mt-1 text-[10px] sm:text-xs text-gray-500 font-mono">
               📖 {new Date(media.started_reading_at).toLocaleDateString('pt-BR')} 
               {media.finished_reading_at ? ` → ${new Date(media.finished_reading_at).toLocaleDateString('pt-BR')}` : ' (LENDO)'}
             </p>

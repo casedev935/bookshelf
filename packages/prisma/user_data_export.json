@@ -1,0 +1,2388 @@
+{
+  "metadata": {
+    "exported_at": "2026-03-30T23:19:41.752Z",
+    "source_user_email": "case.dev@outlook.com"
+  },
+  "user": {
+    "email": "case.dev@outlook.com",
+    "name": "George",
+    "username": "george"
+  },
+  "movies": [
+    {
+      "title": "Being John Malkovich",
+      "release_year": 1999,
+      "director": "Spike Jonze",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rFpKAnc9X01sucqFPiD9pzxLpiA.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Conte d'automne",
+      "release_year": 1998,
+      "director": "Éric Rohmer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/bYa85ViOIDL1hT3WZ7zZvnDOFUe.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Before Sunrise",
+      "release_year": 1995,
+      "director": "Richard Linklater",
+      "poster_url": "https://image.tmdb.org/t/p/w500/gUD2xpkiWaCUabnwMgopECylsKc.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Name of the Rose",
+      "release_year": 1986,
+      "director": "Jean-Jacques Annaud",
+      "poster_url": "https://image.tmdb.org/t/p/w500/8o6U4vBbAop4344tMnzdu8pN7Qy.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Man Who Laughs",
+      "release_year": 1928,
+      "director": "Paul Leni",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xatKRPtXuNyPO87MNX2D7DXwwQg.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "The General",
+      "release_year": 1926,
+      "director": "Clyde Bruckman",
+      "poster_url": "https://image.tmdb.org/t/p/w500/dFCEHn5Y8vqu1r3TMCa0xHYnxTo.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Das Testament des Dr. Mabuse",
+      "release_year": 1933,
+      "director": "Fritz Lang",
+      "poster_url": "https://image.tmdb.org/t/p/w500/7Zo9HdY0pnfFxQ789sCmVIOBZ9k.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Gone with the Wind",
+      "release_year": 1939,
+      "director": "Victor Fleming",
+      "poster_url": "https://image.tmdb.org/t/p/w500/jYNxBGPznKSJjNqp1N713oTli0m.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "The Maltese Falcon",
+      "release_year": 1941,
+      "director": "John Huston",
+      "poster_url": "https://image.tmdb.org/t/p/w500/3RC0zHss6LSxVpdCs59nCkwkQT4.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Boca de Ouro",
+      "release_year": 1963,
+      "director": "Nelson Pereira dos Santos",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xtxu0UuJZ4aGzsrP9rg0kv5ejdh.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "It's a Wonderful Life",
+      "release_year": 1946,
+      "director": "Frank Capra",
+      "poster_url": "https://image.tmdb.org/t/p/w500/u9oQTcUTcWxJwv60JkGVjIBzfuB.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "8 and a half",
+      "release_year": 1963,
+      "director": "Federico Fellini",
+      "poster_url": "https://image.tmdb.org/t/p/w500/nQkrZRxnvrkb6BV7ZYmdwJoFGDt.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Apartment",
+      "release_year": 1960,
+      "director": "Billy Wilder",
+      "poster_url": "https://image.tmdb.org/t/p/w500/omZs5505ceaHXhh4FL2TpmpVC94.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "The Stranger",
+      "release_year": 1946,
+      "director": "Orson Welles",
+      "poster_url": "https://image.tmdb.org/t/p/w500/pdgS6f1OFLDZmBuLqiVDabyyKOF.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "The Razor's Edge",
+      "release_year": 1946,
+      "director": "Edmund Goulding",
+      "poster_url": "https://image.tmdb.org/t/p/w500/a6UTn8J0dftf4YBID6qAf1UeZEx.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "She Wore a Yellow Ribbon",
+      "release_year": 1949,
+      "director": "John Ford",
+      "poster_url": "https://image.tmdb.org/t/p/w500/sb6EBrgw3yxU9sjF3qZzw95L3We.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Rio Grande",
+      "release_year": 1950,
+      "director": "John Ford",
+      "poster_url": "https://image.tmdb.org/t/p/w500/qcDCLP9a7aqobaKq5uIo87i70qn.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Winchester '73",
+      "release_year": 1950,
+      "director": "Anthony Mann",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rqRgjWqSmK9oI6duvigPmn49aVG.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "The Brothers Karamazov",
+      "release_year": 1958,
+      "director": "Richard Brooks",
+      "poster_url": "https://image.tmdb.org/t/p/w500/ebehR57SnzCmA9ce8hZXVQgl0lU.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Memory Lane",
+      "release_year": 2010,
+      "director": "Mikhaël Hers",
+      "poster_url": "https://image.tmdb.org/t/p/w500/dx6DoVsSJfCsOwBvY27ZTcxxTOt.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "The Snows of Kilimanjaro",
+      "release_year": 1952,
+      "director": "Henry King",
+      "poster_url": "https://image.tmdb.org/t/p/w500/qyacg8is64T8b7ujrSyhDF19LSg.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Clash by Night",
+      "release_year": 1952,
+      "director": "Fritz Lang",
+      "poster_url": "https://image.tmdb.org/t/p/w500/zhGWvfuKUSeOZZaHJrIGyluGLZY.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Il cappotto",
+      "release_year": 1952,
+      "director": "Alberto Lattuada",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4vRcttEi90GHvqllfPTi7HFH5wv.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Rear Window",
+      "release_year": 1954,
+      "director": "Alfred Hitchcock",
+      "poster_url": "https://image.tmdb.org/t/p/w500/ckYI4gqqKlSWAVwtLfZSUfwoquW.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Ordet",
+      "release_year": 1955,
+      "director": "Carl Theodor Dreyer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/kaIw7YKzOqInAwPavNgGupI7d2G.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "The Searchers",
+      "release_year": 1956,
+      "director": "John Ford",
+      "poster_url": "https://image.tmdb.org/t/p/w500/eYeu5zK5OKYymE4mGv3o5Ov0eSB.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "The Big Country",
+      "release_year": 1958,
+      "director": "William Wyler",
+      "poster_url": "https://image.tmdb.org/t/p/w500/7HqqimIX9DfIwJRlFwDYVdREQnl.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Ascenseur pour l'échafaud",
+      "release_year": 1958,
+      "director": "Louis Malle",
+      "poster_url": "https://image.tmdb.org/t/p/w500/75VNUuchCgX0Yj9yy7Mva84zPmB.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Les dames du Bois de Boulogne",
+      "release_year": 1945,
+      "director": "Robert Bresson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/aXLrYOJR5DwzBemQxN8S6ndUADb.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Vertigo",
+      "release_year": 1958,
+      "director": "Alfred Hitchcock",
+      "poster_url": "https://image.tmdb.org/t/p/w500/lzyh1lsD4Qaid6bG5zk57Y3bEM.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Ben-Hur",
+      "release_year": 1959,
+      "director": "William Wyler",
+      "poster_url": "https://image.tmdb.org/t/p/w500/m4WQ1dBIrEIHZNCoAjdpxwSKWyH.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "The Sound and the Fury",
+      "release_year": 1959,
+      "director": "Martin Ritt",
+      "poster_url": "https://image.tmdb.org/t/p/w500/vNzr5YImhoBwOyCSBhcIZhAF9IA.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Ballada o soldate",
+      "release_year": 1959,
+      "director": "Grigoriy Chukhray",
+      "poster_url": "https://image.tmdb.org/t/p/w500/oJG87hL5wQp68DhPAr8oWRB1eM0.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "RUSSO"
+    },
+    {
+      "title": "La dolce vita",
+      "release_year": 1960,
+      "director": "Federico Fellini",
+      "poster_url": "https://image.tmdb.org/t/p/w500/l0IgwhbAuYIbBgm8YsHRit1Fa4L.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Fly Me to the Moon",
+      "release_year": 2024,
+      "director": "Greg Berlanti",
+      "poster_url": "https://image.tmdb.org/t/p/w500/vGLp898JntN7s5KABbiJ7PCS3ZL.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "PASSAR TEMPO"
+    },
+    {
+      "title": "Silk Road",
+      "release_year": 2021,
+      "director": "Tiller Russell",
+      "poster_url": "https://image.tmdb.org/t/p/w500/9kE67ohQbiisTOf5jmDvRAzqXF2.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "ESPIONAGEM"
+    },
+    {
+      "title": "6 Days",
+      "release_year": 2017,
+      "director": "Toa Fraser",
+      "poster_url": "https://image.tmdb.org/t/p/w500/sUJiLYDlTmnhPj0aMCXEi9QPfb5.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Madame Bovary",
+      "release_year": 2014,
+      "director": "Sophie Barthes",
+      "poster_url": "https://image.tmdb.org/t/p/w500/tX1RHcbaO02YmhNJVvMEXQ4RREB.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Zero Dark Thirty",
+      "release_year": 2012,
+      "director": "Kathryn Bigelow",
+      "poster_url": "https://image.tmdb.org/t/p/w500/fWpjkM77R5o4MV0nxO2cnywkCoJ.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "ESPIONAGEM"
+    },
+    {
+      "title": "Dans la maison",
+      "release_year": 2012,
+      "director": "François Ozon",
+      "poster_url": "https://image.tmdb.org/t/p/w500/3c5SLOQiBE6UDirUkTLM2ilEcSV.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Ulisse",
+      "release_year": 1954,
+      "director": "Mario Camerini",
+      "poster_url": "https://image.tmdb.org/t/p/w500/1CfcgKuraMVSDlkzuJIbJxY9BKv.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Belye nochi",
+      "release_year": 1960,
+      "director": "Ivan Pyryev",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xKNNuMHa5JQMakJmgHV8FtOzVOJ.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "RUSSO"
+    },
+    {
+      "title": "Babettes gaestebud",
+      "release_year": 1987,
+      "director": "Gabriel Axel",
+      "poster_url": "https://image.tmdb.org/t/p/w500/sdfOX3tkFD5Fc9WtJtAow2vHT9T.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Blue Velvet",
+      "release_year": 1986,
+      "director": "David Lynch",
+      "poster_url": "https://image.tmdb.org/t/p/w500/1Nlq42CnLmkXzj7TN58c3VjlwLn.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Witness",
+      "release_year": 1985,
+      "director": "Peter Weir",
+      "poster_url": "https://image.tmdb.org/t/p/w500/ejAHSqPdLoPUQWC2VNarhRbcf46.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Idi i smotri",
+      "release_year": 1985,
+      "director": "Elem Klimov",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4UrI9R4LPmMgj2v7xM6zK79smAH.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Fanny och Alexander",
+      "release_year": 1982,
+      "director": "Ingmar Bergman",
+      "poster_url": "https://image.tmdb.org/t/p/w500/u4q6wg1J2ggIMaVQwdbFQSgv1WF.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "For Your Eyes Only",
+      "release_year": 1981,
+      "director": "John Glen",
+      "poster_url": "https://image.tmdb.org/t/p/w500/ko5EzaFPbKL5Zi2YjbgIdVlgJ5R.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "ESPIONAGEM"
+    },
+    {
+      "title": "Being There",
+      "release_year": 1979,
+      "director": "Hal Ashby",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rPROtAqFX9lJ7vYmcauFwO6LLev.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Perceval le Gallois",
+      "release_year": 1978,
+      "director": "Éric Rohmer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/wwAV6104tEkI7eiTTrDYOQ1QKrq.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "A Portrait of the Artist as a Young Man",
+      "release_year": 1977,
+      "director": "Joseph Strick",
+      "poster_url": "https://image.tmdb.org/t/p/w500/1qEln2nz34zHTHwcYIlMbdbMABo.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Duellists",
+      "release_year": 1977,
+      "director": "Ridley Scott",
+      "poster_url": "https://image.tmdb.org/t/p/w500/gdyHx1tra3SjPx4aD2x9DE9K0UN.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Outlaw Josey Wales",
+      "release_year": 1976,
+      "director": "Clint Eastwood",
+      "poster_url": "https://image.tmdb.org/t/p/w500/7qhPffMpzmXQKcShsnlf0aln1ej.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "L'innocente",
+      "release_year": 1976,
+      "director": "Luchino Visconti",
+      "poster_url": "https://image.tmdb.org/t/p/w500/1FJpP0DlksLwnnHa6yIz8ivnJSa.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Zerkalo",
+      "release_year": 1975,
+      "director": "Andrei Tarkovsky",
+      "poster_url": "https://image.tmdb.org/t/p/w500/5UGOajJsUnacT6tHgh6loNV5V4g.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "RUSSO"
+    },
+    {
+      "title": "Amici miei",
+      "release_year": 1975,
+      "director": "Mario Monicelli",
+      "poster_url": "https://image.tmdb.org/t/p/w500/yaFPdOVCLiAC1LlJq1TgnIM0SKB.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "One Flew Over the Cuckoo's Nest",
+      "release_year": 1975,
+      "director": "Miloš Forman",
+      "poster_url": "https://image.tmdb.org/t/p/w500/nqz0NHRmbc57HZdZxi66shMzGKO.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Godfather Part II",
+      "release_year": 1974,
+      "director": "Francis Ford Coppola",
+      "poster_url": "https://image.tmdb.org/t/p/w500/3ViYPhSAPwH2avQjdMl49F8PklB.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Sting",
+      "release_year": 1973,
+      "director": "George Roy Hill",
+      "poster_url": "https://image.tmdb.org/t/p/w500/jEJ0ZucEdSe2nk6OSHFVQkxYZXG.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Godfather",
+      "release_year": 1972,
+      "director": "Francis Ford Coppola",
+      "poster_url": "https://image.tmdb.org/t/p/w500/oJagOzBu9Rdd9BrciseCm3U3MCU.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Solyaris",
+      "release_year": 1972,
+      "director": "Andrei Tarkovsky",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xabQ3ljbRpUYbYxJiRfq7WT15p.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "RUSSO"
+    },
+    {
+      "title": "Morte a Venezia",
+      "release_year": 1971,
+      "director": "Luchino Visconti",
+      "poster_url": "https://image.tmdb.org/t/p/w500/cCstvgJ50J56JuN49BcOS73Uj4Q.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Rio Lobo",
+      "release_year": 1970,
+      "director": "Howard Hawks",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xYAnVB0Y5zlqhHIpX8PD4HBjekV.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Queimada",
+      "release_year": 1969,
+      "director": "Gillo Pontecorvo",
+      "poster_url": "https://image.tmdb.org/t/p/w500/l5xbeVX339OOLHqkgDh4JeEPWHI.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Medea",
+      "release_year": 1969,
+      "director": "Pier Paolo Pasolini",
+      "poster_url": "https://image.tmdb.org/t/p/w500/jnKGqtWvIX7gVCqyI1ugBq0EqLb.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Vargtimmen",
+      "release_year": 1968,
+      "director": "Ingmar Bergman",
+      "poster_url": "https://image.tmdb.org/t/p/w500/i74Ysis4GJiTh8ckByN3XH6Apja.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "C'era una volta il West",
+      "release_year": 1968,
+      "director": "Sergio Leone",
+      "poster_url": "https://image.tmdb.org/t/p/w500/sBcaRQEZInpiQNSKKW5wjcEtXUS.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "La collectionneuse",
+      "release_year": 1967,
+      "director": "Éric Rohmer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rY5MRD6mIV28XA1Q5oq7TNrd3nd.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Mouchette",
+      "release_year": 1967,
+      "director": "Robert Bresson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/65XExPWHtgemDHsCksk2K2HCaNS.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "A Man for All Seasons",
+      "release_year": 1966,
+      "director": "Fred Zinnemann",
+      "poster_url": "https://image.tmdb.org/t/p/w500/nlS8n2miCLdG0LSrxdZ9vyE68ea.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Fahrenheit 451",
+      "release_year": 1966,
+      "director": "François Truffaut",
+      "poster_url": "https://image.tmdb.org/t/p/w500/kMNRZ4wsfSlPfzGBmAoFxVpZeMi.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "El Dorado",
+      "release_year": 1966,
+      "director": "Howard Hawks",
+      "poster_url": "https://image.tmdb.org/t/p/w500/jMCHamGIm1aYIZCLi7XEZruyoAO.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "The Sons of Katie Elder",
+      "release_year": 1965,
+      "director": "Henry Hathaway",
+      "poster_url": "https://image.tmdb.org/t/p/w500/n6ox5IniBxxx6ISTol5pm36WoFr.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Il vangelo secondo Matteo",
+      "release_year": 1964,
+      "director": "Pier Paolo Pasolini",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xLbUJHMqeRzHB9JHUxzhF4ZjQxO.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Irma la Douce",
+      "release_year": 1963,
+      "director": "Billy Wilder",
+      "poster_url": "https://image.tmdb.org/t/p/w500/8lK5voP0N4NFEgGgk77zFjHqUaj.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Great Escape",
+      "release_year": 1963,
+      "director": "John Sturges",
+      "poster_url": "https://image.tmdb.org/t/p/w500/iTh8thzuxiM5FwCaxsSTpaix27L.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "AÇÃO"
+    },
+    {
+      "title": "The Man Who Shot Liberty Valance",
+      "release_year": 1962,
+      "director": "John Ford",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xEg6KFuU8Xd2VsLf2ujm337G33d.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Le procès",
+      "release_year": 1962,
+      "director": "Orson Welles",
+      "poster_url": "https://image.tmdb.org/t/p/w500/cPSEsFpXKhxk3GtA8GIKfZSiqA8.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "release_year": 1962,
+      "director": "Robert Mulligan",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xGxD1n1BrMKoX2PCUt4mVgwLcCC.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Tom Jones",
+      "release_year": 1963,
+      "director": "Tony Richardson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/lr96HlpD2lGCNwHiddCu0WRKJZh.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Lawrence of Arabia",
+      "release_year": 1962,
+      "director": "David Lean",
+      "poster_url": "https://image.tmdb.org/t/p/w500/r0xZR5ENEc8Pp2ULhkP4lgUWk8Y.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "White Chicks",
+      "release_year": 2004,
+      "director": "Keenen Ivory Wayans",
+      "poster_url": "https://image.tmdb.org/t/p/w500/aJZOcorpgloDLkPP6ED0t9sXjNu.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "BESTEIROL"
+    },
+    {
+      "title": "La passion de Dodin Bouffant",
+      "release_year": 2023,
+      "director": "Trần Anh Hùng",
+      "poster_url": "https://image.tmdb.org/t/p/w500/ACNj3KTzNnhtUGMBy1IeCgrEhS.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "The Silence of the Lambs",
+      "release_year": 1991,
+      "director": "Jonathan Demme",
+      "poster_url": "https://image.tmdb.org/t/p/w500/9IflTrxN8yw44ZxhfvJPziGzGHM.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "A Hidden Life",
+      "release_year": 2019,
+      "director": "Terrence Malick",
+      "poster_url": "https://image.tmdb.org/t/p/w500/oh5cKQgC54MAu62YCXNHVPiKIoY.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Magnolia",
+      "release_year": 1999,
+      "director": "Paul Thomas Anderson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/fzdTiUQ8Qzft7TJRcH8OUPQvutA.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Lust for Life",
+      "release_year": 1956,
+      "director": "Vincente Minnelli",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4akLVaokqPAbOF7NFQ3JDzI7Jb3.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Un beau matin",
+      "release_year": 2022,
+      "director": "Mia Hansen-Løve",
+      "poster_url": "https://image.tmdb.org/t/p/w500/3La0AnUbH2rlYIxtNHFd6ta6Lut.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "The Devil All the Time",
+      "release_year": 2020,
+      "director": "Antonio Campos",
+      "poster_url": "https://image.tmdb.org/t/p/w500/spqWjgLWvWlluIodXFn1SsNtISC.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "A Quiet Place",
+      "release_year": 2018,
+      "director": "John Krasinski",
+      "poster_url": "https://image.tmdb.org/t/p/w500/eUmlIbsCQKQ7G5VxDn8A6PVElY7.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Phantom Thread",
+      "release_year": 2017,
+      "director": "Paul Thomas Anderson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/BCBB2pNxBb1ruNTO5oqjyMNqW4.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Nueve reinas",
+      "release_year": 2000,
+      "director": "Fabián Bielinsky",
+      "poster_url": "https://image.tmdb.org/t/p/w500/81dNUMGIB55L8PxYHkcWUG594og.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "ARGENTINO"
+    },
+    {
+      "title": "American Pastoral",
+      "release_year": 2016,
+      "director": "Ewan McGregor",
+      "poster_url": "https://image.tmdb.org/t/p/w500/nK2lA3LPPqkuetlMTqYZJ8P2fb3.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Locke",
+      "release_year": 2013,
+      "director": "Steven Knight",
+      "poster_url": "https://image.tmdb.org/t/p/w500/tTREq5tTyYwmSLDRMhybJ82zXcX.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Snatch",
+      "release_year": 2000,
+      "director": "Guy Ritchie",
+      "poster_url": "https://image.tmdb.org/t/p/w500/fnbXu4HYTsOvbibOjnq8zF0Q7pe.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "AÇÃO"
+    },
+    {
+      "title": "Her",
+      "release_year": 2013,
+      "director": "Spike Jonze",
+      "poster_url": "https://image.tmdb.org/t/p/w500/yyDGhBY8RYXyXYADeFq1BDxpLkl.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "L.A. Confidential",
+      "release_year": 1997,
+      "director": "Curtis Hanson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/yCzn6ZNhYjCBIin58TePBco64rC.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Way Back",
+      "release_year": 2010,
+      "director": "Peter Weir",
+      "poster_url": "https://image.tmdb.org/t/p/w500/iXqWyVkysvJxdomsFbXuHhJutuP.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Trainspotting",
+      "release_year": 1996,
+      "director": "Danny Boyle",
+      "poster_url": "https://image.tmdb.org/t/p/w500/y2eJoZx7s79Azq0AwwSImyG8tB1.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "AÇÃO"
+    },
+    {
+      "title": "The Master",
+      "release_year": 2012,
+      "director": "Paul Thomas Anderson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/vz9vNqPzouUPW2Ah7iRBPittuwm.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Conte d'été",
+      "release_year": 1996,
+      "director": "Éric Rohmer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/dyQvBPSNr3zlgwsVFY6PVFsbmW3.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "There Will Be Blood",
+      "release_year": 2007,
+      "director": "Paul Thomas Anderson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/cOEbxHAm8CfbpAE9fKv9vTZaWeL.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Fugitive",
+      "release_year": 1993,
+      "director": "Andrew Davis",
+      "poster_url": "https://image.tmdb.org/t/p/w500/qmMQw6dOZ4Dv3TtPzUNzHdQ8une.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Oliver Twist",
+      "release_year": 2005,
+      "director": "Roman Polanski",
+      "poster_url": "https://image.tmdb.org/t/p/w500/zhPdYZ3x2uanhM1SyBj4CuL6hSa.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Unforgiven",
+      "release_year": 1992,
+      "director": "Clint Eastwood",
+      "poster_url": "https://image.tmdb.org/t/p/w500/kmMDDCOB8xPCrmFW7w9zqgymCWJ.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Everything Is Illuminated",
+      "release_year": 2005,
+      "director": "Liev Schreiber",
+      "poster_url": "https://image.tmdb.org/t/p/w500/6xAD10EKnvruIGR4NtyskPP8GU9.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Madame Satã",
+      "release_year": 2002,
+      "director": "Karim Aïnouz",
+      "poster_url": "https://image.tmdb.org/t/p/w500/qqo0UaR8f1EIZrAD2EiKm8liJge.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Royal Tenenbaums",
+      "release_year": 2001,
+      "director": "Wes Anderson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/zRzBGrncDZADU1x6jqSHz6z5uLc.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "PASSAR TEMPO"
+    },
+    {
+      "title": "Le placard",
+      "release_year": 2001,
+      "director": "Francis Veber",
+      "poster_url": "https://image.tmdb.org/t/p/w500/vJ03v7UwsTyOKaYNevgjmmlD2Uy.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Bitter Moon",
+      "release_year": 1992,
+      "director": "Roman Polanski",
+      "poster_url": "https://image.tmdb.org/t/p/w500/uVO2vUnBrpOvSq2CABfySWOAYim.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "1492: Conquest of Paradise",
+      "release_year": 1992,
+      "director": "Ridley Scott",
+      "poster_url": "https://image.tmdb.org/t/p/w500/vLQMpD6eAvs0DOGZdgpTYHTP4Mu.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Trust",
+      "release_year": 1990,
+      "director": "Hal Hartley",
+      "poster_url": "https://image.tmdb.org/t/p/w500/9wE7LuIkvuPfr4Ye6fMqPXHqaiE.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "4 aventures de Reinette et Mirabelle",
+      "release_year": 1987,
+      "director": "Éric Rohmer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/qDS4Ko6mlLJtZhcGqRqdSjQAaA8.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Barry Lyndon",
+      "release_year": 1975,
+      "director": "Stanley Kubrick",
+      "poster_url": "https://image.tmdb.org/t/p/w500/dOJtBSyI30wWc08UmyEKLsu4Rfk.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Chinatown",
+      "release_year": 1974,
+      "director": "Roman Polanski",
+      "poster_url": "https://image.tmdb.org/t/p/w500/kZRSP3FmOcq0xnBulqpUQngJUXY.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "L'amour l'après-midi",
+      "release_year": 1972,
+      "director": "Éric Rohmer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rxanbhxeX3oU6hREpRZ85FbmKmz.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Ma nuit chez Maud",
+      "release_year": 1969,
+      "director": "Éric Rohmer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/hcydzYYFEZBEJOPnxpBoyh99IcJ.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "O Brother, Where Art Thou?",
+      "release_year": 2000,
+      "director": "Joel Coen",
+      "poster_url": "https://image.tmdb.org/t/p/w500/aZ9YMtRcTZg0CBsqD2Abr9Up0He.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Dead Man Walking",
+      "release_year": 1995,
+      "director": "Tim Robbins",
+      "poster_url": "https://image.tmdb.org/t/p/w500/y8Xgpw5Reh1Kkv7AbeUjTSjaMFH.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "La reine Margot",
+      "release_year": 1994,
+      "director": "Patrice Chéreau",
+      "poster_url": "https://image.tmdb.org/t/p/w500/zXtsq0EioidDrpAONFicGukUlEL.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Léon",
+      "release_year": 1994,
+      "director": "Luc Besson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/lNyuX5XibtzRImuhACGy42jHXIs.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Reality Bites",
+      "release_year": 1994,
+      "director": "Ben Stiller",
+      "poster_url": "https://image.tmdb.org/t/p/w500/krKNlvBpnL1I5inNzc5g615XYJo.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Schindler's List",
+      "release_year": 1993,
+      "director": "Steven Spielberg",
+      "poster_url": "https://image.tmdb.org/t/p/w500/jbnF7dVi8iu80zTsWAC0Om8ZYOu.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Conte d'hiver",
+      "release_year": 1992,
+      "director": "Éric Rohmer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/syZ3IXDfh7Fwhb3fQz9JgTzZAHV.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Akira",
+      "release_year": 1988,
+      "director": "Katsuhiro Otomo",
+      "poster_url": "https://image.tmdb.org/t/p/w500/tbwwTQ3EqSdotbQ3ZcIl6vKBv7q.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "A Room with a View",
+      "release_year": 1986,
+      "director": "James Ivory",
+      "poster_url": "https://image.tmdb.org/t/p/w500/mB0GfsOr8e8PN0TKsmGHqHFOqZe.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Brazil",
+      "release_year": 1985,
+      "director": "Terry Gilliam",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rsVIiNuCzWYZCyadMiBDFq6IuwH.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Cotton Club",
+      "release_year": 1984,
+      "director": "Francis Ford Coppola",
+      "poster_url": "https://image.tmdb.org/t/p/w500/62SVGRvH3rdzskUedXiH7EbNuqX.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Fast Times at Ridgemont High",
+      "release_year": 1982,
+      "director": "Amy Heckerling",
+      "poster_url": "https://image.tmdb.org/t/p/w500/nwzBGSQdxQhZOOKw7kMZWcW6aWq.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "BESTEIROL"
+    },
+    {
+      "title": "O Beijo No Asfalto",
+      "release_year": 1981,
+      "director": "Bruno Barreto",
+      "poster_url": "https://image.tmdb.org/t/p/w500/e70ma7N3AQHiG0BJdh66JfwqWOl.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Dog Day Afternoon",
+      "release_year": 1975,
+      "director": "Sidney Lumet",
+      "poster_url": "https://image.tmdb.org/t/p/w500/9ARCiiOejxr8gsOkoMyNac8gRdS.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "...E o Vento Levou",
+      "release_year": 1939,
+      "director": "Victor Fleming",
+      "poster_url": "https://image.tmdb.org/t/p/w500/jYNxBGPznKSJjNqp1N713oTli0m.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Macbeth",
+      "release_year": 1948,
+      "director": "Orson Welles",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4DbzuePqGcUY7olAKzGly7kCEmU.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Sommaren med Monika",
+      "release_year": 1953,
+      "director": "Ingmar Bergman",
+      "poster_url": "https://image.tmdb.org/t/p/w500/ho6WuZBa2Hg0w3ILvSewhv4iV5h.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Les passagers de la nuit",
+      "release_year": 2022,
+      "director": "Mikhaël Hers",
+      "poster_url": "https://image.tmdb.org/t/p/w500/8svyTfpaaHfzOufcvus02Nn2etS.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Jeune et jolie",
+      "release_year": 2013,
+      "director": "François Ozon",
+      "poster_url": "https://image.tmdb.org/t/p/w500/zxTAIGGAaTBkHjjzX88Gy6wpf5j.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Sunrise: A Song of Two Humans",
+      "release_year": 1927,
+      "director": "F. W. Murnau",
+      "poster_url": "https://image.tmdb.org/t/p/w500/y6buV7pYT0TIb3vwvc5oDQ6b8Gc.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "M - Eine Stadt sucht einen Murder",
+      "release_year": 1931,
+      "director": "Fritz Lang",
+      "poster_url": "https://image.tmdb.org/t/p/w500/yMXURSp7WgLCOYa71L5u0oea4MW.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Quo Vadis",
+      "release_year": 1951,
+      "director": "Mervyn LeRoy",
+      "poster_url": "https://image.tmdb.org/t/p/w500/dqF1dattMNiwGjPSphu2VSi558Q.jpg",
+      "status": "assistido",
+      "watched_at": "2026-03-07T00:00:00.000Z",
+      "category": "CULT"
+    },
+    {
+      "title": "The Blue Bird",
+      "release_year": 1940,
+      "director": "Walter Lang",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4MLru2banKCbCC5iGOmqon3h569.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Roma città aperta",
+      "release_year": 1945,
+      "director": "Roberto Rossellini",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4F6swrmExL01J7KuZgl841aqiQ.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Brief Encounter",
+      "release_year": 1945,
+      "director": "David Lean",
+      "poster_url": "https://image.tmdb.org/t/p/w500/tpJuLNQzzsH0DAdVXNwP0udd9Va.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Mildred Pierce",
+      "release_year": 1945,
+      "director": "Michael Curtiz",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4IovGng05bhO1Uaohgt3fHa2zsD.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "The Big Sleep",
+      "release_year": 1946,
+      "director": "Howard Hawks",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rbiRKne6wUzZtBQBBrp4muu0Bsr.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Portrait of Jennie",
+      "release_year": 1948,
+      "director": "William Dieterle",
+      "poster_url": "https://image.tmdb.org/t/p/w500/AuZVFoCOxKKwC6eKWol4NkAFpWi.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Luci del variet",
+      "release_year": 1950,
+      "director": "Federico Fellini",
+      "poster_url": "https://image.tmdb.org/t/p/w500/6enNjXeUdSoaqeJEJVqgfVReSeV.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "High Noon",
+      "release_year": 1952,
+      "director": "Fred Zinnemann",
+      "poster_url": "https://image.tmdb.org/t/p/w500/1lT3IOT6vTCAya7fYiQayMlS1Gk.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Le quai des brumes",
+      "release_year": 1938,
+      "director": "Marcel Carné",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rQuijWdbuVcEHKu49ceAg65GtFY.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Here",
+      "release_year": 2024,
+      "director": "Robert Zemeckis",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rmqBc3qRXeSgzCcWY2H4l9M8eIT.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Nightmare Alley",
+      "release_year": 2021,
+      "director": "Guillermo del Toro",
+      "poster_url": "https://image.tmdb.org/t/p/w500/nndZUt9Lf8ZwefYBTGe5opGLJuY.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "13 Hours: The Secret Soldiers of Benghazi",
+      "release_year": 2016,
+      "director": "Michael Bay",
+      "poster_url": "https://image.tmdb.org/t/p/w500/K4lEgO47Axbidt5MJo5KljpP3G.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Big Short",
+      "release_year": 2015,
+      "director": "Adam McKay",
+      "poster_url": "https://image.tmdb.org/t/p/w500/ef0fKJs8QdVF3Epxfa9EN33iD8Z.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "El secreto de sus ojos",
+      "release_year": 2009,
+      "director": "Juan José Campanella",
+      "poster_url": "https://image.tmdb.org/t/p/w500/pefOYP69bB3ZC6p6B3ZbWc46ioT.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "ARGENTINO"
+    },
+    {
+      "title": "La grande bellezza",
+      "release_year": 2013,
+      "director": "Paolo Sorrentino",
+      "poster_url": "https://image.tmdb.org/t/p/w500/7tkOOOkysBJIhpFKEqouvzUvvZu.jpg",
+      "status": "proximo",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Two Lovers",
+      "release_year": 2008,
+      "director": "James Gray",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rKmqtmOtDoNgOhVFbF2m3FhXP4J.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Body of Lies",
+      "release_year": 2008,
+      "director": "Ridley Scott",
+      "poster_url": "https://image.tmdb.org/t/p/w500/wIUBj0wIcTsqcFsxGFUdx6e5Lhp.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "ESPIONAGEM"
+    },
+    {
+      "title": "Mon meilleur ami",
+      "release_year": 2006,
+      "director": "Patrice Leconte",
+      "poster_url": "https://image.tmdb.org/t/p/w500/i4AWBOA737OrkAMHS0s6kFFyauz.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Little Miss Sunshine",
+      "release_year": 2006,
+      "director": "Valerie Faris",
+      "poster_url": "https://image.tmdb.org/t/p/w500/gwLPVYqe1efIxkx6LQT7piZweH2.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Le rayon vert",
+      "release_year": 1986,
+      "director": "Éric Rohmer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/fWUjMHrOOTMZu3ycNakkqaKtRWA.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Never Say Never Again",
+      "release_year": 1983,
+      "director": "Irvin Kershner",
+      "poster_url": "https://image.tmdb.org/t/p/w500/cCPjcQS49wxdccMIIKUJ1lcy8k.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "ESPIONAGEM"
+    },
+    {
+      "title": "La nuit de Varennes",
+      "release_year": 1982,
+      "director": "Ettore Scola",
+      "poster_url": "https://image.tmdb.org/t/p/w500/n9n4Yyk2VgyslK7uFDYZJas1bRD.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "The Shining",
+      "release_year": 1980,
+      "director": "Stanley Kubrick",
+      "poster_url": "https://image.tmdb.org/t/p/w500/47BdQqDWnj3VIzpH9bd2agho2PN.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Force 10 from Navarone",
+      "release_year": 1978,
+      "director": "Guy Hamilton",
+      "poster_url": "https://image.tmdb.org/t/p/w500/3bFRwivCZuXx7fHWt4SpYaiHkNL.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "AÇÃO"
+    },
+    {
+      "title": "Interiors",
+      "release_year": 1978,
+      "director": "Woody Allen",
+      "poster_url": "https://image.tmdb.org/t/p/w500/qCyErZap7BrQkbt6y5abcTNNVY7.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Suspiria",
+      "release_year": 1977,
+      "director": "Dario Argento",
+      "poster_url": "https://image.tmdb.org/t/p/w500/5ya8jTbNZTrCFUx9OwpNBjCivXY.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Night of the Hunter",
+      "release_year": 1955,
+      "director": "Charles Laughton",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rs5l1CMfAIu6sSg3ZWocCkNOBGu.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Gunfight at the O.K. Corral",
+      "release_year": 1957,
+      "director": "John Sturges",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4DgNQD4SqPCGQZw7jwvf7JBDdGC.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Det sjunde inseglet",
+      "release_year": 1957,
+      "director": "Ingmar Bergman",
+      "poster_url": "https://image.tmdb.org/t/p/w500/j1xE9l5n3Qk0d0pRG0iz9oNNwoH.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Cat on a Hot Tin Roof",
+      "release_year": 1958,
+      "director": "Richard Brooks",
+      "poster_url": "https://image.tmdb.org/t/p/w500/uaEwrRGBDSlLp3NRvY7KQFzmOSf.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "North by Northwest",
+      "release_year": 1959,
+      "director": "Alfred Hitchcock",
+      "poster_url": "https://image.tmdb.org/t/p/w500/fYMQBR5SXqMoOYsOBxgZYEtXTr7.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Spartacus",
+      "release_year": 1960,
+      "director": "Stanley Kubrick",
+      "poster_url": "https://image.tmdb.org/t/p/w500/7Ia2ziy1juSFsl3ZCaaRn15Yo2A.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Far from the Madding Crowd",
+      "release_year": 2015,
+      "director": "Thomas Vinterberg",
+      "poster_url": "https://image.tmdb.org/t/p/w500/1GsWLlFnS79kpz9DgW91M6yB46H.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Spy Who Loved Me",
+      "release_year": 1977,
+      "director": "Lewis Gilbert",
+      "poster_url": "https://image.tmdb.org/t/p/w500/6kKHtGOpyrVNScUdV6IS53dj1Qm.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "ESPIONAGEM"
+    },
+    {
+      "title": "The Shootist",
+      "release_year": 1976,
+      "director": "Don Siegel",
+      "poster_url": "https://image.tmdb.org/t/p/w500/l4TC4gBvRBe4D0FbSFoP2zM1K0X.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "The Man Who Would Be King",
+      "release_year": 1975,
+      "director": "John Huston",
+      "poster_url": "https://image.tmdb.org/t/p/w500/sJbPXGxgF3BlaCUt9y4avzGRJVD.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Rooster Cogburn",
+      "release_year": 1975,
+      "director": "Stuart Millar",
+      "poster_url": "https://image.tmdb.org/t/p/w500/cVK75Ay60ZIaSXf3wbdya8Cad7i.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Steppenwolf",
+      "release_year": 1974,
+      "director": "Fred Haines",
+      "poster_url": "https://image.tmdb.org/t/p/w500/Aoy0l6O1x6lSjH8L06s6ZSRhY7a.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Great Gatsby",
+      "release_year": 1974,
+      "director": "Jack Clayton",
+      "poster_url": "https://image.tmdb.org/t/p/w500/mNt9nyoJL4Gdv1McDIfypL6lo1o.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Cahill: United States Marshal",
+      "release_year": 1973,
+      "director": "Andrew V. McLaglen",
+      "poster_url": "https://image.tmdb.org/t/p/w500/hzxcSilaWXwOm6RXbHT1Mm56o4W.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Sleuth",
+      "release_year": 1972,
+      "director": "Joseph L. Mankiewicz",
+      "poster_url": "https://image.tmdb.org/t/p/w500/761cDeSDBrln49agRWy8gUrvrlU.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Diamonds Are Forever",
+      "release_year": 1971,
+      "director": "Guy Hamilton",
+      "poster_url": "https://image.tmdb.org/t/p/w500/2KaF1sNqfbli0sEigocClvdb3Ez.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "ESPIONAGEM"
+    },
+    {
+      "title": "La caduta degli dei",
+      "release_year": 1969,
+      "director": "Luchino Visconti",
+      "poster_url": "https://image.tmdb.org/t/p/w500/y3LtyG2bT1MKseH3M2WHrX9OMzM.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Green Berets",
+      "release_year": 1968,
+      "director": "John Wayne",
+      "poster_url": "https://image.tmdb.org/t/p/w500/e3y5qhIPg7uFEoVRvx2GvOc4UMg.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "AÇÃO"
+    },
+    {
+      "title": "The Wild Bunch",
+      "release_year": 1969,
+      "director": "Sam Peckinpah",
+      "poster_url": "https://image.tmdb.org/t/p/w500/ibkP7TzPFZ3s8YlJAjzQEonDOEb.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "You Only Live Twice",
+      "release_year": 1967,
+      "director": "Lewis Gilbert",
+      "poster_url": "https://image.tmdb.org/t/p/w500/urm9c8XMHHi974C6EoVzd2bdwQE.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "ESPIONAGEM"
+    },
+    {
+      "title": "Nevada Smith",
+      "release_year": 1966,
+      "director": "Henry Hathaway",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4QJLqSZRnhAb9pezEEIxidVINes.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "L'armata Brancaleone",
+      "release_year": 1966,
+      "director": "Mario Monicelli",
+      "poster_url": "https://image.tmdb.org/t/p/w500/nE5AG2qeOKDybxy8rlxcSUqSvkr.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Il buono, il brutto, il cattivo",
+      "release_year": 1966,
+      "director": "Sergio Leone",
+      "poster_url": "https://image.tmdb.org/t/p/w500/16z08yn82sTmdSS7nsGvRNDIVnz.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Doctor Zhivago",
+      "release_year": 1965,
+      "director": "David Lean",
+      "poster_url": "https://image.tmdb.org/t/p/w500/6oMm7FQPnGHhJKD6ztvh4mg5Trm.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Per qualche dollaro in più",
+      "release_year": 1965,
+      "director": "Sergio Leone",
+      "poster_url": "https://image.tmdb.org/t/p/w500/1qO2p7gGPhVxjV6FPYwQcQ3gVWC.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "La donna del lago",
+      "release_year": 1965,
+      "director": "Luigi Bazzoni",
+      "poster_url": "https://image.tmdb.org/t/p/w500/oaVXwWS2dXQVfiRA9swoUee9A3C.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "My Fair Lady",
+      "release_year": 1964,
+      "director": "George Cukor",
+      "poster_url": "https://image.tmdb.org/t/p/w500/lePZjXwcUHzQt5OA1VgUCE5ygRl.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Le mépris",
+      "release_year": 1963,
+      "director": "Jean-Luc Godard",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4ePDVG6pf0I36a4YROGNu9aZ6Y3.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Il gattopardo",
+      "release_year": 1963,
+      "director": "Luchino Visconti",
+      "poster_url": "https://image.tmdb.org/t/p/w500/cjy8Gsd0SswcLo6AA3oW6ibGDvi.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Vivre sa vie: Film en douze tableaux",
+      "release_year": 1962,
+      "director": "Jean-Luc Godard",
+      "poster_url": "https://image.tmdb.org/t/p/w500/2dP8bhgWg4myqlXRLK54PvusfZL.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "How the West Was Won",
+      "release_year": 1962,
+      "director": "John Ford",
+      "poster_url": "https://image.tmdb.org/t/p/w500/A6Jnu6ViAsI42VF0Qv8XtNbtxx5.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "What Ever Happened to Baby Jane?",
+      "release_year": 1962,
+      "director": "Robert Aldrich",
+      "poster_url": "https://image.tmdb.org/t/p/w500/cUmqJtXESwRNTUU9s1Xtu6PJSUH.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Breakfast at Tiffany's",
+      "release_year": 1961,
+      "director": "Blake Edwards",
+      "poster_url": "https://image.tmdb.org/t/p/w500/iBdn6jkwOKnJ02W8pdljYyCkYch.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "The Comancheros",
+      "release_year": 1961,
+      "director": "Michael Curtiz",
+      "poster_url": "https://image.tmdb.org/t/p/w500/55bX8AYfaEfvkaRYEJqVuG1cSLz.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "VELHO OESTE"
+    },
+    {
+      "title": "Fa yeung nin wah",
+      "release_year": 2000,
+      "director": "Wong Kar-Wai",
+      "poster_url": "https://image.tmdb.org/t/p/w500/yCKaf65zoySg2iJdsews4Rafl7C.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Boondock Saints",
+      "release_year": 1999,
+      "director": "Troy Duffy",
+      "poster_url": "https://image.tmdb.org/t/p/w500/hj03YpU8GotsyGXNTLPaxy5MT9D.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Mean Girls",
+      "release_year": 2004,
+      "director": "Mark Waters",
+      "poster_url": "https://image.tmdb.org/t/p/w500/iV7YxvjdmRZo0amjGA2BZW5kkAu.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "BESTEIROL"
+    },
+    {
+      "title": "Lock, Stock and Two Smoking Barrels",
+      "release_year": 1998,
+      "director": "Guy Ritchie",
+      "poster_url": "https://image.tmdb.org/t/p/w500/gQeQzk66849ti9N83Bi0TOmkZuy.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "AÇÃO"
+    },
+    {
+      "title": "Boogie Nights",
+      "release_year": 1997,
+      "director": "Paul Thomas Anderson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/vLpRnmn90rX0zIL1Z4H5dRtAjmj.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Beaumarchais l'insolent",
+      "release_year": 1996,
+      "director": "Édouard Molinaro",
+      "poster_url": "https://image.tmdb.org/t/p/w500/hPfb9v4I24eQvFBOMvvrbcQV2Hp.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Badkonake sefid",
+      "release_year": 1995,
+      "director": "Jafar Panahi",
+      "poster_url": "https://image.tmdb.org/t/p/w500/Ata1d5ef5KGiUP8bWkJQ5ZSEpNN.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "IRANIANO"
+    },
+    {
+      "title": "Miracle on 34th Street",
+      "release_year": 1994,
+      "director": "Les Mayfield",
+      "poster_url": "https://image.tmdb.org/t/p/w500/jXijZbmVxln5xwlzsaKzaZmVNId.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Romeo Is Bleeding",
+      "release_year": 1993,
+      "director": "Peter Medak",
+      "poster_url": "https://image.tmdb.org/t/p/w500/kaL98VGy4uqAqKWjb4OBfP6SFtC.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Basic Instinct",
+      "release_year": 1992,
+      "director": "Paul Verhoeven",
+      "poster_url": "https://image.tmdb.org/t/p/w500/2is4I2PjBQ2CPd6w349vMxuSkji.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Hunt for Red October",
+      "release_year": 1990,
+      "director": "John McTiernan",
+      "poster_url": "https://image.tmdb.org/t/p/w500/iMViugzRCgok8Of27cCN9yru8BD.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "AÇÃO"
+    },
+    {
+      "title": "Conte de printemps",
+      "release_year": 1990,
+      "director": "Éric Rohmer",
+      "poster_url": "https://image.tmdb.org/t/p/w500/o61f2Z7aU3rExhClxdr9868IrNc.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Awakenings",
+      "release_year": 1990,
+      "director": "Penny Marshall",
+      "poster_url": "https://image.tmdb.org/t/p/w500/x8aqnp6Sg5SWTlv5u7meCpVtKlO.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Noce blanche",
+      "release_year": 1989,
+      "director": "Jean-Claude Brisseau",
+      "poster_url": "https://image.tmdb.org/t/p/w500/oIAuENSKfMIjhSq67i7UGnsDE5i.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Crimes and Misdemeanors",
+      "release_year": 1989,
+      "director": "Woody Allen",
+      "poster_url": "https://image.tmdb.org/t/p/w500/a5N16sZ0tDzPJkj8jIc2x0yQEhK.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Stalker",
+      "release_year": 1979,
+      "director": "Andrei Tarkovsky",
+      "poster_url": "https://image.tmdb.org/t/p/w500/ftyrhQS0Kedc55ev4IgBlKSF0ez.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "RUSSO"
+    },
+    {
+      "title": "Huckleberry Finn",
+      "release_year": 1974,
+      "director": "J. Lee Thompson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/g4yl5xXpz8Yf0BUc1K42qOZop0H.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "La vingt-cinquième heure",
+      "release_year": 1967,
+      "director": "Henri Verneuil",
+      "poster_url": "https://image.tmdb.org/t/p/w500/vdy4JZ2mVXEPTwTnPbAQJwopWu5.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Cool Hand Luke",
+      "release_year": 1967,
+      "director": "Stuart Rosenberg",
+      "poster_url": "https://image.tmdb.org/t/p/w500/erPwY8mjlzSV2u9wIoRfzwg5C9J.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Germania anno zero",
+      "release_year": 1948,
+      "director": "Roberto Rossellini",
+      "poster_url": "https://image.tmdb.org/t/p/w500/bZLpgBEQscLpdhP39KLPEE0PaHl.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "They Live by Night",
+      "release_year": 1948,
+      "director": "Nicholas Ray",
+      "poster_url": "https://image.tmdb.org/t/p/w500/rLWd1RniBxBspl2MysFxPGei717.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "The Quiet Man",
+      "release_year": 1952,
+      "director": "John Ford",
+      "poster_url": "https://image.tmdb.org/t/p/w500/w6YfnZyDfXRRTRrTfWzJw2O7iyt.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "La vie d'un honnète homme",
+      "release_year": 1953,
+      "director": "Sacha Guitry",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xlff7dF94RWnhqrAMeC5qrEp44N.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Orfeu Negro",
+      "release_year": 1959,
+      "director": "Marcel Camus",
+      "poster_url": "https://image.tmdb.org/t/p/w500/iaYmiZJwicSO5R1DQ2q6lKLAXEi.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Dane-ye anjir-e ma'abed",
+      "release_year": 2024,
+      "director": "Mohammad Rasoulof",
+      "poster_url": "https://image.tmdb.org/t/p/w500/eUseiPOEMhWIOV06RQCNjB4U9Kx.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "IRANIANO"
+    },
+    {
+      "title": "Perfect Days",
+      "release_year": 2023,
+      "director": "Wim Wenders",
+      "poster_url": "https://image.tmdb.org/t/p/w500/p4oCDJgtYPg8lWqmeNIsqPwzZ7X.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Une jeune fille qui va bien",
+      "release_year": 2021,
+      "director": "Sandrine Kiberlain",
+      "poster_url": "https://image.tmdb.org/t/p/w500/1Ri0i0yy1cviiDHOek6d6D7Ah77.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "A Rainy Day in New York",
+      "release_year": 2019,
+      "director": "Woody Allen",
+      "poster_url": "https://image.tmdb.org/t/p/w500/qePheB15kmdODD85MVdmpztcABo.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "The Foreigner",
+      "release_year": 2017,
+      "director": "Martin Campbell",
+      "poster_url": "https://image.tmdb.org/t/p/w500/c0k6pnGCNPJHmTHyRzY6tbgVZvl.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Wonder Wheel",
+      "release_year": 2017,
+      "director": "Woody Allen",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xkfebRm9rO6rQmIelznLIybPTHi.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Hell or High Water",
+      "release_year": 2016,
+      "director": "David Mackenzie",
+      "poster_url": "https://image.tmdb.org/t/p/w500/fz3RPQPquiyb4xi0isCIf6lIx7F.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Relatos salvajes",
+      "release_year": 2014,
+      "director": "Damián Szifron",
+      "poster_url": "https://image.tmdb.org/t/p/w500/bkhHsHoa5PYBmhT93mYOC28Hhd2.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "ARGENTINO"
+    },
+    {
+      "title": "Paris-Manhattan",
+      "release_year": 2012,
+      "director": "Sophie Lellouche",
+      "poster_url": "https://image.tmdb.org/t/p/w500/bV9UhqzDmCVsFf7JBK5sqoCSkkf.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Detachment",
+      "release_year": 2011,
+      "director": "Tony Kaye",
+      "poster_url": "https://image.tmdb.org/t/p/w500/crnxHH3SEEtrZEhLf662ulHAPeV.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Tinker Tailor Soldier Spy",
+      "release_year": 2011,
+      "director": "Tomas Alfredson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/959q2ADFAM9Cnr1cLGwhEuwK9LU.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "ESPIONAGEM"
+    },
+    {
+      "title": "The Lovely Bones",
+      "release_year": 2009,
+      "director": "Peter Jackson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/vJEvxyCflOvCoY3ToK6iQoUCVrn.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Gran Torino",
+      "release_year": 2008,
+      "director": "Clint Eastwood",
+      "poster_url": "https://image.tmdb.org/t/p/w500/lnguNPnsaC4siq4TlzM2QEsTLsa.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Atonement",
+      "release_year": 2007,
+      "director": "Joe Wright",
+      "poster_url": "https://image.tmdb.org/t/p/w500/sFIHg2JAyOe6ua0WM2IvcVplrZj.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Das Leben der Anderen",
+      "release_year": 2006,
+      "director": "Florian Henckel von Donnersmarck",
+      "poster_url": "https://image.tmdb.org/t/p/w500/xaHem8yAbLxGPzHKMsNKsTgalH4.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "ESPIONAGEM"
+    },
+    {
+      "title": "Gosford Park",
+      "release_year": 2001,
+      "director": "Robert Altman",
+      "poster_url": "https://image.tmdb.org/t/p/w500/d7u7ohi8eXEUw7CDH4BmWTWz3Ta.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Monster's Ball",
+      "release_year": 2001,
+      "director": "Marc Forster",
+      "poster_url": "https://image.tmdb.org/t/p/w500/e6xUt9sp1W8qWRjWgRmhb8nSvSC.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Demolition Man",
+      "release_year": 1993,
+      "director": "Marco Brambilla",
+      "poster_url": "https://image.tmdb.org/t/p/w500/2BjAYQNwmdIZF6XQQ2rLOrios1Q.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "AÇÃO"
+    },
+    {
+      "title": "Tous les matins du monde",
+      "release_year": 1991,
+      "director": "Alain Corneau",
+      "poster_url": "https://image.tmdb.org/t/p/w500/4HD0mpf8cHP22vG37umvUshfmV9.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "The Muppets Take Manhattan",
+      "release_year": 1984,
+      "director": "Frank Oz",
+      "poster_url": "https://image.tmdb.org/t/p/w500/tbY56ZJ62uepwJeqjQsGNFAFxch.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "PASSAR TEMPO"
+    },
+    {
+      "title": "Fúria de Titãs",
+      "release_year": 1981,
+      "director": "Desmond Davis",
+      "poster_url": "https://image.tmdb.org/t/p/w500/5LObtR57MxWD7Me0tiRaqgrqKQD.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "AÇÃO"
+    },
+    {
+      "title": "The Hand of God: A Mão de Deus",
+      "release_year": 2021,
+      "director": "Paolo Sorrentino",
+      "poster_url": "https://image.tmdb.org/t/p/w500/yRZrr8E12jEK07n6LCiVN6bsJUU.jpg",
+      "status": "proximo",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Armadilhas do Coração",
+      "release_year": 2002,
+      "director": "Oliver Parker",
+      "poster_url": "https://image.tmdb.org/t/p/w500/87r4e4pL4STfpdjtqNZxlyjvcMd.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "PASSAR TEMPO"
+    },
+    {
+      "title": "Peixe Grande e Suas Histórias Maravilhosas",
+      "release_year": 2003,
+      "director": "Tim Burton",
+      "poster_url": "https://image.tmdb.org/t/p/w500/2IVwZB2necwjAmnw14Wxi7isYq4.jpg",
+      "status": "assistido",
+      "watched_at": "2026-03-21T00:00:00.000Z",
+      "category": "DRAMA"
+    },
+    {
+      "title": "King Kong",
+      "release_year": 1933,
+      "director": "Merian C. Cooper",
+      "poster_url": "https://image.tmdb.org/t/p/w500/b3CrCIfY8bj9nSsdcFmozTozjyx.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Hamnet: A Vida Antes de Hamlet",
+      "release_year": 2025,
+      "director": "Chloé Zhao",
+      "poster_url": "https://image.tmdb.org/t/p/w500/njatIGrIlZCxB88UUBC2xgmfCNE.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DRAMA"
+    },
+    {
+      "title": "Wuthering Heights",
+      "release_year": 1939,
+      "director": "William Wyler",
+      "poster_url": "https://image.tmdb.org/t/p/w500/pwHdSzXwlUFAcYGcFutKcPcX2OW.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Fantasia",
+      "release_year": 1940,
+      "director": "Wilfred Jackson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/hKg8Zpm4fMOy7KmrBHdo4YCT5dS.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Los olvidados",
+      "release_year": 1950,
+      "director": "Luis Buñuel",
+      "poster_url": "https://image.tmdb.org/t/p/w500/jkjw7Y7WgUnUt9OW2KwWWolTyrw.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Journal d'un curé de campagne",
+      "release_year": 1951,
+      "director": "Robert Bresson",
+      "poster_url": "https://image.tmdb.org/t/p/w500/cC0Yq35TYoqOX5bsUIQwfiiYkDr.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "The Barefoot Contessa",
+      "release_year": 1954,
+      "director": "Joseph L. Mankiewicz",
+      "poster_url": "https://image.tmdb.org/t/p/w500/fttcqSQcMtvWR4XefPf3j5M8cE9.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "CULT"
+    },
+    {
+      "title": "Limonov: O Camaleão Russo",
+      "release_year": 2024,
+      "director": "Kirill Serebrennikov",
+      "poster_url": "https://image.tmdb.org/t/p/w500/fweZyRVletoZAsGaq0enR6jdxWP.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "RUSSO"
+    },
+    {
+      "title": "Jeanne du Barry",
+      "release_year": 2023,
+      "director": "Maïwenn",
+      "poster_url": "https://image.tmdb.org/t/p/w500/tVoZZs8RadmZEAIsD9XGVmhXwmo.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Searching for Sugar Man",
+      "release_year": 2012,
+      "director": "Malik Bendjelloul",
+      "poster_url": "https://image.tmdb.org/t/p/w500/5EFtkPb1IDvT5HZv1iGWqUuwVjp.jpg",
+      "status": "assistido",
+      "watched_at": null,
+      "category": "DOCUMENTÁRIO"
+    },
+    {
+      "title": "Amanda",
+      "release_year": 2018,
+      "director": "Mikhaël Hers",
+      "poster_url": "https://image.tmdb.org/t/p/w500/3OB0aXheqk3AJIb0F2scZngmmy4.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    },
+    {
+      "title": "Aquele Sentimento do Verão",
+      "release_year": 2015,
+      "director": "Mikhaël Hers",
+      "poster_url": "https://image.tmdb.org/t/p/w500/aUzwEhriHDZVNMuN66VQTxKYpkR.jpg",
+      "status": "na_fila",
+      "watched_at": null,
+      "category": "FRANCÊS"
+    }
+  ],
+  "series": [
+    {
+      "title": "Teerã",
+      "release_year": 2020,
+      "poster_url": "https://image.tmdb.org/t/p/w500/l7V6xd2JX4Wihd4FWNC4PNafVyd.jpg",
+      "status": "finalizada"
+    },
+    {
+      "title": "Stranger Things",
+      "release_year": 2016,
+      "poster_url": "https://image.tmdb.org/t/p/w500/twfKp60THrcOIep9sjHODOOfO8d.jpg",
+      "status": "finalizada"
+    },
+    {
+      "title": "Pachinko",
+      "release_year": 2022,
+      "poster_url": "https://image.tmdb.org/t/p/w500/wUTXdmL6oNjhiStGveOaPeuFOYQ.jpg",
+      "status": "finalizada"
+    },
+    {
+      "title": "Samurai de Olhos Azuis",
+      "release_year": 2023,
+      "poster_url": "https://image.tmdb.org/t/p/w500/kgRZ9g4fnDRToxrUsWqEyCW4wbV.jpg",
+      "status": "finalizada"
+    },
+    {
+      "title": "Xógum: A Gloriosa Saga do Japão",
+      "release_year": 2024,
+      "poster_url": "https://image.tmdb.org/t/p/w500/gaOb9hyCDUcbZiTYcHy7mIFmNo.jpg",
+      "status": "finalizada"
+    },
+    {
+      "title": "Slow Horses",
+      "release_year": 2022,
+      "poster_url": "https://image.tmdb.org/t/p/w500/rdNvIaPXpkUZl5tQLsTP15osfu2.jpg",
+      "status": "finalizada"
+    },
+    {
+      "title": "A Very Secret Service",
+      "release_year": 2015,
+      "poster_url": "https://image.tmdb.org/t/p/w500/oLzQyOqkXDYKsBu9v6wy9kJnDSO.jpg",
+      "status": "finalizada"
+    }
+  ]
+}

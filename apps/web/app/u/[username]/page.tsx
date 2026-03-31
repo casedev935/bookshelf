@@ -11,6 +11,7 @@ export default function PublicProfilePage() {
   const [error, setError] = useState<string | null>(null);
   const [layoutMode, setLayoutMode] = useState<'grid' | 'row'>('row');
   const [activeTab, setActiveTab] = useState<'MOVIES' | 'BOOKS' | 'SERIES'>('MOVIES');
+  const [showFilters, setShowFilters] = useState(false);
   
   const [filterTitle, setFilterTitle] = useState('');
   const [filterYear, setFilterYear] = useState('');
@@ -89,8 +90,8 @@ export default function PublicProfilePage() {
   );
 
   if (error) return (
-    <div className="h-screen w-full flex items-center justify-center bg-[var(--color-background-primary)] p-6 text-center">
-      <div className="neo-brutalist bg-white p-8 max-w-md">
+    <div className="min-h-screen w-full flex items-center justify-center bg-[var(--color-background-primary)] p-6 text-center">
+      <div className="neo-brutalist p-8 max-w-md w-full">
         <h1 className="text-4xl font-black mb-4">404</h1>
         <p className="font-mono font-bold text-red-600 uppercase">ACCESS_DENIED: PROBABLY PRIVATE OR NOT FOUND.</p>
       </div>
@@ -100,64 +101,79 @@ export default function PublicProfilePage() {
   const userInitial = data?.name ? data.name.charAt(0).toUpperCase() : '?';
 
   return (
-    <div className="min-h-screen w-full bg-[var(--color-background-primary)] flex flex-col items-center overflow-y-auto">
+    <div className="min-h-screen w-full bg-[var(--color-background-primary)] flex flex-col items-center overflow-x-hidden">
       {/* Public Header */}
-      <div className="w-full bg-white border-b-4 border-black p-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full border-4 border-black bg-[var(--color-accent)] flex items-center justify-center font-black text-2xl text-white overflow-hidden shrink-0">
+      <div className="w-full bg-[var(--color-card-bg)] border-b-4 border-[var(--color-text-primary)] p-4 sm:p-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="flex items-center gap-3 sm:gap-4 w-full md:w-auto">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 sm:border-4 border-[var(--color-text-primary)] bg-[var(--color-accent)] flex items-center justify-center font-black text-xl sm:text-2xl text-[var(--color-card-bg)] overflow-hidden shrink-0">
             {data?.profile_picture_url ? (
               <img src={data.profile_picture_url} alt={data.name} className="w-full h-full object-cover" />
             ) : (
               <span>{userInitial}</span>
             )}
           </div>
-          <div className="flex flex-col">
-            <h1 className="text-2xl font-black uppercase tracking-tight">{data?.name}'s COLLECTION</h1>
-            <span className="font-mono text-xs font-bold text-gray-500">BY @{data?.username}</span>
+          <div className="flex flex-col min-w-0">
+            <h1 className="text-xl sm:text-2xl font-black uppercase tracking-tight truncate w-full">{data?.name}'s COLLECTION</h1>
+            <span className="font-mono text-[10px] sm:text-xs font-bold text-gray-500 truncate">BY @{data?.username}</span>
           </div>
         </div>
         
-        <div className="flex items-center gap-2">
-            <div className="neo-brutalist bg-black text-white px-4 py-2 text-sm font-black italic">PUBLIC_VIEW (READ-ONLY)</div>
+        <div className="flex items-center w-full md:w-auto mt-2 md:mt-0">
+            <div className="neo-brutalist text-[var(--color-card-bg)] bg-[var(--color-text-primary)] px-3 py-1.5 text-[10px] sm:text-sm font-black italic whitespace-nowrap">PUBLIC_VIEW (READ-ONLY)</div>
         </div>
       </div>
 
-      <div className="w-full max-w-7xl p-4 md:p-8 flex flex-col gap-10">
+      <div className="w-full max-w-7xl p-4 md:p-8 flex flex-col gap-6 sm:gap-10">
         {/* Navigation & Toolbar */}
         <div className="flex flex-col gap-4">
-          <div className="flex flex-wrap gap-2 items-center">
-            {['MOVIES', 'BOOKS', 'SERIES'].map(tab => (
-              <button
-                key={tab}
-                onClick={() => {
-                    setActiveTab(tab as any);
-                    setFilterCategory(''); // Reset category when switching tabs
-                }}
-                className={`neo-brutalist px-6 py-2 font-black transition-colors ${activeTab === tab ? 'bg-black text-white' : 'bg-white hover:bg-gray-100'}`}
-              >
-                {tab}
-              </button>
-            ))}
+          <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center w-full">
+            <div className="flex flex-nowrap overflow-x-auto gap-2 pb-2 sm:pb-0 scrollbar-hide snap-x w-full">
+              {['MOVIES', 'BOOKS', 'SERIES'].map(tab => (
+                <button
+                  key={tab}
+                  onClick={() => {
+                      setActiveTab(tab as any);
+                      setFilterCategory(''); // Reset category when switching tabs
+                  }}
+                  className={`neo-brutalist px-5 py-2 text-sm sm:text-base font-black transition-colors whitespace-nowrap snap-start shrink-0 ${activeTab === tab ? 'bg-[var(--color-text-primary)] text-[var(--color-card-bg)]' : 'hover:bg-[var(--color-card-hover)]'}`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
             
-            <div className="flex-1" />
+            <div className="flex-1 hidden sm:block" />
 
-            <button
-              onClick={() => setLayoutMode(p => p === 'grid' ? 'row' : 'grid')}
-              className="neo-brutalist bg-white border-2 border-black p-2 hover:bg-gray-100 flex items-center justify-center min-w-[44px]"
-              title="Toggle Layout"
-            >
-               {layoutMode === 'grid' ? (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-               ) : (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-               )}
-            </button>
+            <div className="flex gap-2 w-full sm:w-auto shrink-0 justify-between sm:justify-end">
+              <button
+                onClick={() => setShowFilters(!showFilters)}
+                className={`neo-brutalist p-2 flex items-center justify-center min-w-[44px] flex-1 sm:hidden transition-colors ${showFilters ? 'bg-[var(--color-text-primary)] text-[var(--color-card-bg)]' : 'hover:bg-[var(--color-card-hover)]'}`}
+                title="Toggle Filters"
+              >
+                <div className="flex items-center gap-2 font-black text-xs uppercase">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                  <span>Filters</span>
+                </div>
+              </button>
+
+              <button
+                onClick={() => setLayoutMode(p => p === 'grid' ? 'row' : 'grid')}
+                className="neo-brutalist neo-brutalist-button-secondary p-2 flex items-center justify-center min-w-[44px] flex-1 sm:flex-none"
+                title="Toggle Layout"
+              >
+                 {layoutMode === 'grid' ? (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                 ) : (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                 )}
+              </button>
+            </div>
           </div>
 
           {/* Filtering Toolbar */}
-          <div className="neo-brutalist bg-white p-2 flex flex-wrap md:flex-nowrap items-end gap-2">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 flex-grow">
-              <div className="flex flex-col gap-1">
+          <div className={`neo-brutalist p-3 md:flex-row items-end flex-col sm:flex-row gap-3 ${showFilters ? 'flex' : 'hidden sm:flex'}`}>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-3 flex-grow w-full">
+              <div className="flex flex-col gap-1 w-full">
                 <label className="text-[10px] font-black uppercase tracking-wider ml-1">Title</label>
                 <input type="text" placeholder="Title..." className="neo-brutalist-input py-2 text-sm" value={filterTitle} onChange={e => setFilterTitle(e.target.value)} />
               </div>
@@ -191,7 +207,7 @@ export default function PublicProfilePage() {
                  setFilterAuthor('');
                  setFilterCategory('');
                }}
-               className="neo-brutalist-button bg-white text-black border-2 border-black p-2 hover:bg-gray-100 flex items-center justify-center min-w-[44px]"
+               className="neo-brutalist neo-brutalist-button-secondary p-2 flex items-center justify-center min-w-[44px] w-full md:w-auto h-full min-h-[44px]"
                title="Clear Filters"
             >
                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -201,8 +217,8 @@ export default function PublicProfilePage() {
 
         {/* Content List */}
         <div className={layoutMode === 'grid'
-          ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-          : "flex flex-col gap-4"}>
+          ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-5"
+          : "flex flex-col gap-3"}>
           {items.map((m: any) => (
             <MediaCard
               key={m.id}
@@ -213,7 +229,7 @@ export default function PublicProfilePage() {
           ))}
 
           {items.length === 0 && (
-            <div className="col-span-full text-center p-20 bg-white neo-brutalist font-black font-mono text-gray-400 border-dashed border-4 border-gray-200 uppercase text-sm">
+            <div className="col-span-full text-center p-12 sm:p-20 neo-brutalist font-black font-mono text-gray-400 border-dashed uppercase text-sm w-full">
               NO {activeTab} FOUND MATCHING CRITERIA.
             </div>
           )}

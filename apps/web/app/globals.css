@@ -1,27 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background-primary: #f7f9fc;
-  --color-text-primary: #1e293b;
-  --color-accent: #137fec;
-  --color-status-success: #22c55e;
-  --color-status-ongoing: #8b5cf6;
-  --color-status-queue: #f97316;
-  --color-status-next: #0047ab;
-
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains);
 }
 
 @layer base {
+  :root {
+    --color-background-primary: #f7f9fc;
+    --color-text-primary: #1e293b;
+    --color-accent: #137fec;
+    --color-status-success: #22c55e;
+    --color-status-ongoing: #8b5cf6;
+    --color-status-queue: #f97316;
+    --color-status-next: #0047ab;
+    --color-card-bg: #ffffff;
+    --color-card-hover: #f1f5f9;
+  }
+
   body {
     background-color: var(--color-background-primary);
     color: var(--color-text-primary);
-    /* grid lines background para visual "tech" */
+    /* grid lines background para visual "tech" - light opacity adapts to dark mode dynamically */
     background-size: 40px 40px;
     background-image: 
-      linear-gradient(to right, rgba(30, 41, 59, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(30, 41, 59, 0.05) 1px, transparent 1px);
+      linear-gradient(to right, color-mix(in srgb, var(--color-text-primary) 5%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--color-text-primary) 5%, transparent) 1px, transparent 1px);
     font-family: var(--font-sans);
   }
 
@@ -30,7 +34,7 @@
     box-shadow: 6px 6px 0px 0px var(--color-text-primary);
     border-radius: 0;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
-    background-color: white;
+    background-color: var(--color-card-bg);
   }
 
   .neo-brutalist:active {
@@ -40,7 +44,7 @@
 
   .neo-brutalist-button {
     background-color: var(--color-accent);
-    color: white;
+    color: #ffffff;
     font-family: var(--font-mono);
     font-weight: bold;
     padding: 0.5rem 1rem;
@@ -56,7 +60,7 @@
   }
   
   .neo-brutalist-button-secondary {
-    background-color: white;
+    background-color: var(--color-card-bg);
     color: var(--color-text-primary);
     font-family: var(--font-mono);
     padding: 0.5rem 1rem;
@@ -66,11 +70,21 @@
     transition: transform 0.1s ease, box-shadow 0.1s ease;
   }
 
+  .neo-brutalist-button-secondary:hover {
+    background-color: var(--color-card-hover);
+  }
+
+  .neo-brutalist-button-secondary:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px var(--color-text-primary);
+  }
+
   .neo-brutalist-input {
     border: 2px solid var(--color-text-primary);
     padding: 0.5rem;
     font-family: var(--font-sans);
-    background-color: white;
+    background-color: var(--color-card-bg);
+    color: var(--color-text-primary);
     outline: none;
   }
   

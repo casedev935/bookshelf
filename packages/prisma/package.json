@@ -17,6 +17,7 @@
     "generate": "prisma generate",
     "build": "prisma generate",
     "postinstall": "prisma generate",
-    "db:push": "prisma db push"
+    "db:push": "prisma db push",
+    "studio": "prisma studio"
   }
 }

@@ -1,25 +1,4 @@
 services:
-  database:
-    image: postgres:15-alpine
-    container_name: bookshelf-postgres
-    restart: always
-    environment:
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: ${DB_NAME}
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-  adminer:
-    image: adminer
-    container_name: bookshelf-adminer
-    restart: always
-    ports:
-      - "8080:8080"
-    depends_on:
-      - database
   api:
     image: ghcr.io/${GITHUB_REPOSITORY}/api:latest
     container_name: bookshelf-api
@@ -31,7 +10,6 @@ services:
       - TMDB_BASE_URL=${TMDB_BASE_URL}
       - NEXT_PUBLIC_API_URL=https://api-bookshelf.mediamanager.tech/api
     networks:
-      - default
       - gateway_network
     labels:
       - "traefik.enable=true"
@@ -46,7 +24,6 @@ services:
     container_name: bookshelf-web
     restart: always
     networks:
-      - default
       - gateway_network
     labels:
       - "traefik.enable=true"
@@ -59,6 +36,3 @@ services:
 networks:
   gateway_network:
     external: true
-
-volumes:
-  postgres_data:

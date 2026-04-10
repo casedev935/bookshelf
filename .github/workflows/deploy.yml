@@ -76,7 +76,7 @@ jobs:
             DB_USER="${{ secrets.DB_USER }}"
             DB_PASSWORD="${{ secrets.DB_PASSWORD }}"
             DB_NAME="${{ secrets.DB_NAME }}"
-            DATABASE_URL="postgresql://${{ secrets.DB_USER }}:${{ secrets.DB_PASSWORD }}@database:5432/${{ secrets.DB_NAME }}?schema=public"
+            DATABASE_URL="postgresql://${{ secrets.DB_USER }}:${{ secrets.DB_PASSWORD }}@postgres:5432/${{ secrets.DB_NAME }}?schema=public"
             JWT_SECRET="${{ secrets.JWT_SECRET }}"
             GITHUB_REPOSITORY="${{ github.repository }}"
             TMDB_API_KEY="${{ secrets.TMDB_API_KEY }}"

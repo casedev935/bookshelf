@@ -58,7 +58,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           source: "docker-compose.yml"
-          target: "~/bookshelf"
+          target: "/opt/stacks/apps/bookshelf"
 
       - name: Execute remote deploy commands
         uses: appleboy/ssh-action@v1.0.3
@@ -67,9 +67,8 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            mkdir -p ~/bookshelf
-            mkdir -p ~/bookshelf
-            cd ~/bookshelf
+            mkdir -p /opt/stacks/apps/bookshelf
+            cd /opt/stacks/apps/bookshelf
             
             # Create/Update .env file using a shell-safe heredoc
             cat << 'EOF' | sed 's/^[[:space:]]*//' > .env

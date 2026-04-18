@@ -58,7 +58,7 @@ export class BooksService {
     const { title, release_year, author, category_id, cover_url, status, started_reading_at, finished_reading_at } = data;
     const cleanData: any = {};
     if (title !== undefined) cleanData.title = title;
-    if (release_year !== undefined) cleanData.release_year = release_year;
+    if (release_year !== undefined) cleanData.release_year = release_year ? Number(release_year) : null;
     if (author !== undefined) cleanData.author = author;
     if (category_id !== undefined) cleanData.category_id = category_id;
     if (cover_url !== undefined) cleanData.cover_url = cover_url;

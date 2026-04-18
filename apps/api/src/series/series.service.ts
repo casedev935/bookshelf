@@ -91,7 +91,7 @@ export class SeriesService {
     const { title, release_year, category_id, poster_url, status } = data;
     const cleanData: any = {};
     if (title !== undefined) cleanData.title = title;
-    if (release_year !== undefined) cleanData.release_year = release_year;
+    if (release_year !== undefined) cleanData.release_year = release_year ? Number(release_year) : null;
     if (category_id !== undefined) cleanData.category_id = category_id;
     if (poster_url !== undefined) cleanData.poster_url = poster_url;
     if (status !== undefined) cleanData.status = status;

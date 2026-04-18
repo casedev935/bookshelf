@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams } from 'next/navigation';
 import MediaCard from '../../../components/MediaCard';
+import MediaPreviewModal from '../../../components/MediaPreviewModal';
 
 export default function PublicProfilePage() {
   const { username } = useParams();
@@ -12,6 +13,7 @@ export default function PublicProfilePage() {
   const [layoutMode, setLayoutMode] = useState<'grid' | 'row'>('row');
   const [activeTab, setActiveTab] = useState<'MOVIES' | 'BOOKS' | 'SERIES'>('MOVIES');
   const [showFilters, setShowFilters] = useState(false);
+  const [previewMedia, setPreviewMedia] = useState<any>(null);
   
   const [filterTitle, setFilterTitle] = useState('');
   const [filterYear, setFilterYear] = useState('');
@@ -224,6 +226,7 @@ export default function PublicProfilePage() {
               key={m.id}
               media={m}
               layoutMode={layoutMode}
+              onPreview={setPreviewMedia}
               isReadOnly={true}
             />
           ))}
@@ -239,6 +242,12 @@ export default function PublicProfilePage() {
       <footer className="mt-auto p-12 text-center font-mono text-xs font-bold text-gray-400">
         POWERED BY BOOKSHELF | BUILD YOUR OWN AT GITHUB.COM
       </footer>
+      <MediaPreviewModal
+        isOpen={!!previewMedia}
+        onClose={() => setPreviewMedia(null)}
+        media={previewMedia}
+        isReadOnly={true}
+      />
     </div>
   );
 }

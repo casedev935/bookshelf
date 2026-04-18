@@ -105,7 +105,7 @@ export class MoviesService {
     const { title, release_year, director, category_id, poster_url, status, watched_at } = data;
     const cleanData: any = {};
     if (title !== undefined) cleanData.title = title;
-    if (release_year !== undefined) cleanData.release_year = release_year;
+    if (release_year !== undefined) cleanData.release_year = release_year ? Number(release_year) : null;
     if (director !== undefined) cleanData.director = director;
     if (category_id !== undefined) cleanData.category_id = category_id;
     if (poster_url !== undefined) cleanData.poster_url = poster_url;

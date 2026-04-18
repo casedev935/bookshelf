@@ -1,6 +1,6 @@
 import { getCategoryColor } from '../lib/colorUtils';
 
-export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid', isReadOnly = false }: any) {
+export default function MediaCard({ media, onEdit, onDelete, onPreview, layoutMode = 'grid', isReadOnly = false }: any) {
   const isRow = layoutMode === 'row';
   const imageUrl = media.poster_url || media.cover_url;
 
@@ -26,16 +26,22 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
     </span>
   ) : null;
 
-  const handleDelete = () => {
+  const handleDelete = (e: any) => {
+    e.stopPropagation();
     if (window.confirm('TEM CERTEZA QUE DESEJA EXCLUIR ESTE REGISTRO?')) {
       onDelete(media.id);
     }
   };
 
+  const handleEditClick = (e: any) => {
+    e.stopPropagation();
+    onEdit(media);
+  };
+
   const actionButtons = isReadOnly ? null : (
     <div className={`flex gap-2 transition-opacity ${isRow ? 'opacity-100 flex-row justify-end' : 'mt-auto pt-2 border-t-2 border-[var(--color-text-primary)] md:opacity-0 group-hover:opacity-100'}`}>
       <button
-        onClick={() => onEdit(media)}
+        onClick={handleEditClick}
         className="neo-brutalist-button-secondary p-2 flex items-center justify-center flex-1 md:flex-none"
         title="Edit"
       >
@@ -63,7 +69,10 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
   /* ─── ROW MODE ─── */
   if (isRow) {
     return (
-      <div className="neo-brutalist flex flex-row items-center p-2 sm:p-3 gap-2 sm:gap-3 group w-full">
+      <div 
+        onClick={() => onPreview?.(media)}
+        className="neo-brutalist flex flex-row items-center p-2 sm:p-3 gap-2 sm:gap-3 group w-full cursor-pointer hover:bg-[var(--color-card-hover)] transition-colors"
+      >
         {/* Poster Thumbnail */}
         {imageUrl ? (
           <img src={imageUrl} alt={media.title} className="w-[48px] h-16 sm:w-[72px] sm:h-24 object-cover border-2 border-[var(--color-text-primary)] shrink-0" />
@@ -93,18 +102,20 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
         </div>
 
         {/* Meta (Tablet/Desktop only) */}
-        <div className="hidden sm:flex flex-row items-center gap-4 md:gap-8 text-sm font-sans pl-2">
+        <div className="hidden sm:flex flex-row items-center gap-4 md:gap-8 text-sm font-sans pl-2 h-10">
           <p className="w-12 truncate" title={`Release Year: ${media.release_year || '-'}`}>{media.release_year || '-'}</p>
           <p className="w-28 lg:w-40 truncate" title={`${media.mediaType === 'book' ? 'Author' : 'Director'}: ${media.director || media.author || '-'}`}>{media.director || media.author || '-'}</p>
-          {media.watched_at && (
-            <p className="text-xs text-gray-500 font-mono hidden lg:block">📅 {new Date(media.watched_at).toLocaleDateString('pt-BR')}</p>
-          )}
-          {media.started_reading_at && (
-            <p className="text-xs text-gray-500 font-mono hidden lg:block">
-              📖 {new Date(media.started_reading_at).toLocaleDateString('pt-BR')} 
-              {media.finished_reading_at ? ` → ${new Date(media.finished_reading_at).toLocaleDateString('pt-BR')}` : ' (LENDO)'}
-            </p>
-          )}
+          <div className="flex flex-col justify-center min-w-[120px] lg:min-w-[180px]">
+            {media.watched_at && (
+                <p className="text-xs text-gray-500 font-mono hidden lg:block">📅 {new Date(media.watched_at).toLocaleDateString('pt-BR')}</p>
+            )}
+            {media.started_reading_at && (
+                <p className="text-[10px] text-gray-500 font-mono hidden lg:block truncate">
+                📖 {new Date(media.started_reading_at).toLocaleDateString('pt-BR')} 
+                {media.finished_reading_at ? ` → ${new Date(media.finished_reading_at).toLocaleDateString('pt-BR')}` : ' (LENDO)'}
+                </p>
+            )}
+          </div>
         </div>
 
         {actionButtons && <div className="flex w-24 sm:w-24 justify-end shrink-0">{actionButtons}</div>}
@@ -114,7 +125,10 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
 
   /* ─── GRID MODE ─── */
   return (
-    <div className="neo-brutalist flex flex-col relative group w-full overflow-hidden">
+    <div 
+        onClick={() => onPreview?.(media)}
+        className="neo-brutalist flex flex-col relative group w-full overflow-hidden cursor-pointer hover:bg-[var(--color-card-hover)] transition-colors"
+    >
       {/* Poster Image */}
       {imageUrl ? (
         <div className="w-full h-40 sm:h-52 overflow-hidden border-b-2 border-[var(--color-text-primary)]">
@@ -138,23 +152,32 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
           </h3>
         </div>
 
-        {/* Details */}
-        <div className="text-xs sm:text-sm font-sans flex-1">
+        {/* Details - Fixed min-height for alignment */}
+        <div className="text-xs sm:text-sm font-sans flex flex-col gap-1 min-h-[90px] sm:min-h-[110px]">
           <p><strong>YEAR:</strong> {media.release_year || 'N/A'}</p>
-          <p className="truncate" title={`${media.mediaType === 'book' ? 'Author' : 'Director'}: ${media.director || media.author || '-'}`}><strong>{media.mediaType === 'book' ? 'AUTHOR' : 'DIRECTOR'}:</strong> {media.director || media.author || 'N/A'}</p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {categoryBadge}
-            {statusBadge}
+          <p className="truncate" title={`${media.mediaType === 'book' ? 'Author' : 'Director'}: ${media.director || media.author || '-'}`}>
+            <strong>{media.mediaType === 'book' ? 'AUTHOR' : 'DIRECTOR'}:</strong> {media.director || media.author || 'N/A'}
+          </p>
+          
+          <div className="mt-auto pt-1 flex flex-col gap-1">
+             <div className="flex flex-wrap gap-2 mb-1">
+                {categoryBadge}
+                {statusBadge}
+             </div>
+             
+             {/* Date placeholders to avoid jumps */}
+             <div className="min-h-[1.5rem]">
+                {media.watched_at && (
+                    <p className="text-[10px] sm:text-xs text-gray-500 font-mono">📅 {new Date(media.watched_at).toLocaleDateString('pt-BR')}</p>
+                )}
+                {media.started_reading_at && (
+                    <p className="text-[10px] sm:text-xs text-gray-500 font-mono">
+                    📖 {new Date(media.started_reading_at).toLocaleDateString('pt-BR')} 
+                    {media.finished_reading_at ? ` → ${new Date(media.finished_reading_at).toLocaleDateString('pt-BR')}` : ' (LENDO)'}
+                    </p>
+                )}
+             </div>
           </div>
-          {media.watched_at && (
-            <p className="mt-1 text-[10px] sm:text-xs text-gray-500 font-mono">📅 {new Date(media.watched_at).toLocaleDateString('pt-BR')}</p>
-          )}
-          {media.started_reading_at && (
-            <p className="mt-1 text-[10px] sm:text-xs text-gray-500 font-mono">
-              📖 {new Date(media.started_reading_at).toLocaleDateString('pt-BR')} 
-              {media.finished_reading_at ? ` → ${new Date(media.finished_reading_at).toLocaleDateString('pt-BR')}` : ' (LENDO)'}
-            </p>
-          )}
         </div>
 
         {actionButtons}

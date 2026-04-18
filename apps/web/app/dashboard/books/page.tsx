@@ -4,12 +4,14 @@ import { useState, useEffect, useMemo } from 'react';
 import Header from '../../../components/Header';
 import MediaCard from '../../../components/MediaCard';
 import MediaModal from '../../../components/MediaModal';
+import MediaPreviewModal from '../../../components/MediaPreviewModal';
 
 export default function BooksPage() {
   const [books, setBooks] = useState<any[]>([]);
   const [categories, setCategories] = useState<any[]>([]);
   const [isModalOpen, setModalOpen] = useState(false);
   const [editingMedia, setEditingMedia] = useState<any>(null);
+  const [previewMedia, setPreviewMedia] = useState<any>(null);
   const [itemToDelete, setItemToDelete] = useState<string | null>(null);
 
   const [filterTitle, setFilterTitle] = useState('');
@@ -158,6 +160,7 @@ export default function BooksPage() {
               key={b.id}
               media={b}
               layoutMode={layoutMode}
+              onPreview={setPreviewMedia}
               onEdit={() => { setEditingMedia(b); setModalOpen(true); }}
               onDelete={(id: string) => setItemToDelete(id)}
             />
@@ -178,6 +181,13 @@ export default function BooksPage() {
         title={`${editingMedia ? 'EDIT' : 'ADD'} BOOK`}
         type="book"
         initialData={editingMedia}
+      />
+      
+      <MediaPreviewModal
+        isOpen={!!previewMedia}
+        onClose={() => setPreviewMedia(null)}
+        media={previewMedia}
+        onEdit={(m: any) => { setEditingMedia(m); setModalOpen(true); }}
       />
 
       {itemToDelete && (

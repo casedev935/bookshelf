@@ -123,6 +123,10 @@ export default function MediaModal({ isOpen, onClose, onSave, title, initialData
           // Parse category_id
           if (submissionData.category_id) submissionData.category_id = parseInt(submissionData.category_id);
           else delete submissionData.category_id;
+
+          // Parse release_year
+          if (submissionData.release_year) submissionData.release_year = parseInt(submissionData.release_year);
+          else delete submissionData.release_year;
           
           // Convert date strings to full ISO-8601 DateTime
           if (submissionData.watched_at) submissionData.watched_at = new Date(submissionData.watched_at).toISOString();

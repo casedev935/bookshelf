@@ -26,6 +26,12 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
     </span>
   ) : null;
 
+  const handleDelete = () => {
+    if (window.confirm('TEM CERTEZA QUE DESEJA EXCLUIR ESTE REGISTRO?')) {
+      onDelete(media.id);
+    }
+  };
+
   const actionButtons = isReadOnly ? null : (
     <div className={`flex gap-2 transition-opacity ${isRow ? 'opacity-100 flex-row justify-end' : 'mt-auto pt-2 border-t-2 border-[var(--color-text-primary)] md:opacity-0 group-hover:opacity-100'}`}>
       <button
@@ -39,7 +45,7 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
         </svg>
       </button>
       <button
-        onClick={() => onDelete(media.id)}
+        onClick={handleDelete}
         className="neo-brutalist-button p-2 flex items-center justify-center bg-red-500 text-white flex-1 md:flex-none"
         title="Delete"
       >
@@ -101,7 +107,7 @@ export default function MediaCard({ media, onEdit, onDelete, layoutMode = 'grid'
           )}
         </div>
 
-        {actionButtons && <div className="hidden sm:flex w-24 justify-end shrink-0">{actionButtons}</div>}
+        {actionButtons && <div className="flex w-24 sm:w-24 justify-end shrink-0">{actionButtons}</div>}
       </div>
     );
   }

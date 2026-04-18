@@ -43,7 +43,7 @@ export default function Sidebar({ user }: { user?: any }) {
   const userInitial = user?.name ? user.name.charAt(0).toUpperCase() : '?';
 
   return (
-    <div className={`neo-brutalist flex flex-col h-full bg-white transition-all duration-200 shrink-0 ${isOpen ? 'w-56' : 'w-14'}`}>
+    <div className={`neo-brutalist hidden md:flex flex-col h-full bg-white transition-all duration-200 shrink-0 ${isOpen ? 'w-56' : 'w-14'}`}>
       {/* Header with hamburger toggle */}
       <div className={`p-3 border-b-2 border-black flex items-center ${isOpen ? 'justify-between' : 'justify-center'}`}>
         {isOpen && <h2 className="font-mono font-black text-lg">MEDIA_MGR</h2>}

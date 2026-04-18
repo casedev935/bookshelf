@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Sidebar from '../../components/Sidebar';
+import MobileNav from '../../components/MobileNav';
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -48,9 +49,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   }
 
   return (
-    <div className="flex h-screen w-full p-2 md:p-6 gap-2 md:gap-6 overflow-hidden bg-[var(--color-background-primary)]">
+    <div className="flex flex-col md:flex-row h-screen w-full p-2 md:p-6 gap-2 md:gap-6 overflow-hidden bg-[var(--color-background-primary)]">
+      <MobileNav user={user} />
       <Sidebar user={user} />
-      <main className="flex-1 overflow-y-auto flex flex-col">
+      <main className="flex-1 overflow-y-auto flex flex-col min-h-0">
         {children}
       </main>
     </div>

@@ -5,6 +5,7 @@ import Header from '../../../components/Header';
 import MediaCard from '../../../components/MediaCard';
 import MediaModal from '../../../components/MediaModal';
 import MediaPreviewModal from '../../../components/MediaPreviewModal';
+import { exportToExcel, mapMediaForExport } from '../../../lib/exportUtils';
 
 export default function SeriesPage() {
   const [series, setSeries] = useState<any[]>([]);
@@ -13,6 +14,7 @@ export default function SeriesPage() {
   const [editingMedia, setEditingMedia] = useState<any>(null);
   const [previewMedia, setPreviewMedia] = useState<any>(null);
   const [itemToDelete, setItemToDelete] = useState<string | null>(null);
+  const [isExportModalOpen, setExportModalOpen] = useState(false);
 
   const [filterTitle, setFilterTitle] = useState('');
   const [filterYear, setFilterYear] = useState('');
@@ -63,6 +65,12 @@ export default function SeriesPage() {
     
     setModalOpen(false);
     fetchMedia();
+  };
+
+  const handleExport = () => {
+    const exportData = mapMediaForExport(series, 'series');
+    exportToExcel(exportData, 'series_list', 'Series');
+    setExportModalOpen(false);
   };
 
   const handleDelete = async () => {
@@ -135,6 +143,16 @@ export default function SeriesPage() {
             >
               +
             </button>
+            <button
+              onClick={() => setExportModalOpen(true)}
+              className="neo-brutalist-button p-2 px-4 font-black bg-[#22c55e] text-white flex-1 md:flex-none flex items-center justify-center"
+              title="Export to Excel"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span className="ml-2 text-xs uppercase hidden md:inline">Export</span>
+            </button>
           </div>
         </div>
 
@@ -194,6 +212,25 @@ export default function SeriesPage() {
             <div className="flex justify-end gap-3 mt-4">
               <button onClick={() => setItemToDelete(null)} className="neo-brutalist-button-secondary font-bold">CANCEL</button>
               <button onClick={handleDelete} className="neo-brutalist-button px-6 font-black bg-red-600 text-white hover:bg-red-700">DELETE</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {isExportModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/60" onClick={() => setExportModalOpen(false)} />
+          <div className="neo-brutalist bg-white w-full max-w-sm z-10 p-6 flex flex-col gap-4">
+            <h2 className="text-xl font-black uppercase font-sans tracking-tight border-b-2 border-black pb-2 text-[#22c55e]">EXPORT LIST</h2>
+            <p className="font-mono text-sm font-bold text-black">Are you sure you want to export your entire series list to Excel (.xlsx)?</p>
+            <div className="flex justify-end gap-3 mt-4">
+              <button onClick={() => setExportModalOpen(false)} className="neo-brutalist-button-secondary font-bold">CANCEL</button>
+              <button 
+                onClick={handleExport} 
+                className="neo-brutalist-button px-6 font-black bg-[#22c55e] text-white hover:bg-[#16a34a]"
+              >
+                CONFIRM
+              </button>
             </div>
           </div>
         </div>

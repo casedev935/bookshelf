@@ -20,6 +20,7 @@ export default function BooksPage() {
   const [filterYear, setFilterYear] = useState('');
   const [filterAuthor, setFilterAuthor] = useState('');
   const [filterCategory, setFilterCategory] = useState('');
+  const [filterStatus, setFilterStatus] = useState('');
   const [layoutMode, setLayoutMode] = useState<'grid' | 'row'>('row');
 
   const fetchMedia = async () => {
@@ -88,9 +89,10 @@ export default function BooksPage() {
       const matchYear = filterYear ? String(b.release_year) === filterYear : true;
       const matchAuthor = filterAuthor ? (b.author || '').toLowerCase().includes(filterAuthor.toLowerCase()) : true;
       const matchCategory = filterCategory ? (b.category?.name || '').toLowerCase().includes(filterCategory.toLowerCase()) : true;
-      return matchTitle && matchYear && matchAuthor && matchCategory;
+      const matchStatus = filterStatus ? b.status === filterStatus : true;
+      return matchTitle && matchYear && matchAuthor && matchCategory && matchStatus;
     }).map(b => ({ ...b, mediaType: 'book' })),
-  [books, filterTitle, filterYear, filterAuthor, filterCategory]);
+  [books, filterTitle, filterYear, filterAuthor, filterCategory, filterStatus]);
 
   return (
     <div className="flex flex-col h-full w-full bg-[var(--color-background-primary)] overflow-y-auto">
@@ -100,7 +102,7 @@ export default function BooksPage() {
         {/* Simplified Toolbar */}
         <div className="neo-brutalist bg-white p-2 mb-6 flex flex-wrap md:flex-nowrap items-end gap-2">
           {/* Inputs Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 flex-grow">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 flex-grow">
             <div className="flex flex-col gap-1">
               <label className="text-[10px] font-black uppercase tracking-wider ml-1">Title</label>
               <input type="text" placeholder="Title..." className="neo-brutalist-input py-2 text-sm" value={filterTitle} onChange={e => setFilterTitle(e.target.value)} />
@@ -124,6 +126,20 @@ export default function BooksPage() {
                 {categories.map(cat => (
                   <option key={cat.id} value={cat.name}>{cat.name.toUpperCase()}</option>
                 ))}
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] font-black uppercase tracking-wider ml-1">Status</label>
+              <select 
+                className="neo-brutalist-input py-2 text-sm bg-white cursor-pointer" 
+                value={filterStatus} 
+                onChange={e => setFilterStatus(e.target.value)}
+              >
+                <option value="">ALL STATUS</option>
+                <option value="lendo">READING</option>
+                <option value="proximo">NEXT</option>
+                <option value="na_fila">IN QUEUE</option>
+                <option value="lido">READ</option>
               </select>
             </div>
           </div>

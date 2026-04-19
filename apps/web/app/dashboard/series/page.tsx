@@ -19,6 +19,7 @@ export default function SeriesPage() {
   const [filterTitle, setFilterTitle] = useState('');
   const [filterYear, setFilterYear] = useState('');
   const [filterCategory, setFilterCategory] = useState('');
+  const [filterStatus, setFilterStatus] = useState('');
   const [layoutMode, setLayoutMode] = useState<'grid' | 'row'>('row');
 
   const fetchMedia = async () => {
@@ -89,9 +90,10 @@ export default function SeriesPage() {
       const matchTitle = s.title.toLowerCase().includes(filterTitle.toLowerCase());
       const matchYear = filterYear ? String(s.release_year) === filterYear : true;
       const matchCategory = filterCategory ? (s.category?.name || '').toLowerCase().includes(filterCategory.toLowerCase()) : true;
-      return matchTitle && matchYear && matchCategory;
+      const matchStatus = filterStatus ? s.status === filterStatus : true;
+      return matchTitle && matchYear && matchCategory && matchStatus;
     }).map(s => ({ ...s, mediaType: 'series' })),
-  [series, filterTitle, filterYear, filterCategory]);
+  [series, filterTitle, filterYear, filterCategory, filterStatus]);
 
   return (
     <div className="flex flex-col h-full w-full bg-[var(--color-background-primary)] overflow-y-auto">
@@ -100,7 +102,7 @@ export default function SeriesPage() {
       <div className="px-4 md:px-0 w-full flex-1 pb-12">
         {/* Toolbar */}
         <div className="neo-brutalist bg-white p-2 mb-6 flex flex-wrap md:flex-nowrap items-end gap-2">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 flex-grow">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 flex-grow">
             <div className="flex flex-col gap-1">
               <label className="text-[10px] font-black uppercase tracking-wider ml-1">Title</label>
               <input type="text" placeholder="Title..." className="neo-brutalist-input py-2 text-sm" value={filterTitle} onChange={e => setFilterTitle(e.target.value)} />
@@ -120,6 +122,20 @@ export default function SeriesPage() {
                 {categories.map(cat => (
                   <option key={cat.id} value={cat.name}>{cat.name.toUpperCase()}</option>
                 ))}
+              </select>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="text-[10px] font-black uppercase tracking-wider ml-1">Status</label>
+              <select 
+                className="neo-brutalist-input py-2 text-sm bg-white cursor-pointer" 
+                value={filterStatus} 
+                onChange={e => setFilterStatus(e.target.value)}
+              >
+                <option value="">ALL STATUS</option>
+                <option value="assistindo">WATCHING</option>
+                <option value="proximo">NEXT</option>
+                <option value="na_fila">IN QUEUE</option>
+                <option value="finalizada">FINISHED</option>
               </select>
             </div>
           </div>

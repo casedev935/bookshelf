@@ -7,7 +7,7 @@ export class PublicController {
 
   @Get('u/:username')
   async getPublicProfile(@Param('username') username: string) {
-    const user = await this.usersService.findByUsername(username) as any;
+    const user = (await this.usersService.findByUsername(username)) as any;
 
     if (!user || !user.is_public) {
       throw new NotFoundException('Public profile not found');

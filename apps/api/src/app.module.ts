@@ -14,14 +14,14 @@ import { PublicModule } from './public/public.module';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
-    PrismaModule, 
-    UsersModule, 
-    AuthModule, 
-    CategoriesModule, 
-    BooksModule, 
+    PrismaModule,
+    UsersModule,
+    AuthModule,
+    CategoriesModule,
+    BooksModule,
     MoviesModule,
     SeriesModule,
-    PublicModule
+    PublicModule,
   ],
   controllers: [AppController],
   providers: [AppService],

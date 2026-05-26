@@ -1,4 +1,8 @@
-import { Injectable, NotFoundException, ConflictException } from '@nestjs/common';
+import {
+  Injectable,
+  NotFoundException,
+  ConflictException,
+} from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { ConfigService } from '@nestjs/config';
 import { firstValueFrom } from 'rxjs';
@@ -34,8 +38,12 @@ export class SeriesService {
       return items.map((item: any) => ({
         tmdbId: item.id,
         title: item.name, // TV uses 'name' instead of 'title'
-        release_year: item.first_air_date ? new Date(item.first_air_date).getFullYear() : null,
-        poster_url: item.poster_path ? `https://image.tmdb.org/t/p/w500${item.poster_path}` : null,
+        release_year: item.first_air_date
+          ? new Date(item.first_air_date).getFullYear()
+          : null,
+        poster_url: item.poster_path
+          ? `https://image.tmdb.org/t/p/w500${item.poster_path}`
+          : null,
       }));
     } catch (error) {
       console.error('TMDB Search Error:', error);
@@ -45,7 +53,7 @@ export class SeriesService {
 
   async create(userId: string, data: any) {
     const { title, release_year } = data;
-    
+
     // Check for duplicates
     const existing = await this.prisma.series.findFirst({
       where: {
@@ -91,7 +99,8 @@ export class SeriesService {
     const { title, release_year, category_id, poster_url, status } = data;
     const cleanData: any = {};
     if (title !== undefined) cleanData.title = title;
-    if (release_year !== undefined) cleanData.release_year = release_year ? Number(release_year) : null;
+    if (release_year !== undefined)
+      cleanData.release_year = release_year ? Number(release_year) : null;
     if (category_id !== undefined) cleanData.category_id = category_id;
     if (poster_url !== undefined) cleanData.poster_url = poster_url;
     if (status !== undefined) cleanData.status = status;

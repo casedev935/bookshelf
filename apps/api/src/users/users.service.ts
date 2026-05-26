@@ -7,7 +7,9 @@ export class UsersService {
   constructor(private prisma: PrismaService) {}
 
   async create(data: any) {
-    const existingUser = await this.prisma.user.findUnique({ where: { email: data.email } });
+    const existingUser = await this.prisma.user.findUnique({
+      where: { email: data.email },
+    });
     if (existingUser) {
       throw new ConflictException('Email already in use');
     }
@@ -29,7 +31,14 @@ export class UsersService {
   async findById(id: string) {
     return this.prisma.user.findUnique({
       where: { id },
-      select: { id: true, name: true, email: true, username: true, is_public: true, profile_picture_url: true }
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        username: true,
+        is_public: true,
+        profile_picture_url: true,
+      },
     });
   }
 
@@ -43,25 +52,28 @@ export class UsersService {
         profile_picture_url: true,
         movies: {
           include: { category: true },
-          orderBy: { created_at: 'desc' }
+          orderBy: { created_at: 'desc' },
         },
         books: {
           include: { category: true },
-          orderBy: { created_at: 'desc' }
+          orderBy: { created_at: 'desc' },
         },
         series: {
           include: { category: true },
-          orderBy: { created_at: 'desc' }
-        }
-      } as any
+          orderBy: { created_at: 'desc' },
+        },
+      } as any,
     });
   }
 
-  async updateProfile(id: string, data: { username?: string, is_public?: boolean }) {
+  async updateProfile(
+    id: string,
+    data: { username?: string; is_public?: boolean },
+  ) {
     // If username is provided, check if it's already taken
     if (data.username) {
       const existing = await this.prisma.user.findUnique({
-        where: { username: data.username } as any
+        where: { username: data.username } as any,
       });
       if (existing && existing.id !== id) {
         throw new ConflictException('Username already taken');
@@ -71,7 +83,13 @@ export class UsersService {
     return this.prisma.user.update({
       where: { id },
       data: data as any,
-      select: { id: true, name: true, email: true, username: true, is_public: true } as any
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        username: true,
+        is_public: true,
+      } as any,
     });
   }
 }

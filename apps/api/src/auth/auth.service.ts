@@ -7,12 +7,12 @@ import * as argon2 from 'argon2';
 export class AuthService {
   constructor(
     private usersService: UsersService,
-    private jwtService: JwtService
+    private jwtService: JwtService,
   ) {}
 
   async validateUser(email: string, pass: string): Promise<any> {
     const user = await this.usersService.findByEmail(email);
-    if (user && await argon2.verify(user.password_hash, pass)) {
+    if (user && (await argon2.verify(user.password_hash, pass))) {
       const { password_hash, ...result } = user;
       return result;
     }
@@ -27,8 +27,8 @@ export class AuthService {
         id: user.id,
         name: user.name,
         email: user.email,
-        profile_picture_url: user.profile_picture_url
-      }
+        profile_picture_url: user.profile_picture_url,
+      },
     };
   }
 }

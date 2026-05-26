@@ -8,7 +8,10 @@ export class UsersController {
 
   @UseGuards(JwtAuthGuard)
   @Patch('profile')
-  async updateProfile(@Request() req: any, @Body() body: { username?: string, is_public?: boolean }) {
+  async updateProfile(
+    @Request() req: any,
+    @Body() body: { username?: string; is_public?: boolean },
+  ) {
     return this.usersService.updateProfile(req.user.userId, body);
   }
 }

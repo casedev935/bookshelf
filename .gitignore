@@ -56,6 +56,7 @@ Thumbs.db
 # Dados locais / backups
 # ==============================
 backups/
+context/
 *.sqlite
 *.db
 

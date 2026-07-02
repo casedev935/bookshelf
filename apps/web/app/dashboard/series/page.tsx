@@ -177,13 +177,10 @@ export default function SeriesPage() {
           ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
           : "flex flex-col gap-4"}>
           {filteredSeries.sort((a, b) => {
-             // Priority Map
-             const priority: Record<string, number> = { 'assistindo': 0, 'proximo': 1, 'na_fila': 2, 'finalizada': 3 };
-             const pA = priority[a.status || ''] ?? 99;
-             const pB = priority[b.status || ''] ?? 99;
-             if (pA !== pB) return pA - pB;
-
-             return (a.release_year || 0) - (b.release_year || 0);
+            const yearA = a.release_year ?? Infinity;
+            const yearB = b.release_year ?? Infinity;
+            if (yearA === yearB) return a.title.localeCompare(b.title);
+            return yearA - yearB;
           }).map(s => (
             <MediaCard
               key={s.id}

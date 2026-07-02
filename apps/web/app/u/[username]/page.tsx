@@ -72,16 +72,10 @@ export default function PublicProfilePage() {
 
     // Sorting Logic based on type
     return filtered.sort((a: any, b: any) => {
-        let priority: Record<string, number> = {};
-        if (activeTab === 'MOVIES') priority = { 'proximo': 0, 'assistido': 1, 'na_fila': 2 };
-        else if (activeTab === 'BOOKS') priority = { 'lendo': 0, 'proximo': 1, 'na_fila': 2, 'lido': 3 };
-        else if (activeTab === 'SERIES') priority = { 'assistindo': 0, 'proximo': 1, 'na_fila': 2, 'finalizada': 3 };
-
-        const pA = priority[a.status || ''] ?? 99;
-        const pB = priority[b.status || ''] ?? 99;
-        if (pA !== pB) return pA - pB;
-        
-        return (a.release_year || 0) - (b.release_year || 0);
+        const yearA = a.release_year ?? Infinity;
+        const yearB = b.release_year ?? Infinity;
+        if (yearA === yearB) return a.title.localeCompare(b.title);
+        return yearA - yearB;
     });
   }, [data, activeTab, filterTitle, filterYear, filterAuthor, filterCategory]);
 

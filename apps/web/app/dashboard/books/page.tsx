@@ -137,7 +137,6 @@ export default function BooksPage() {
               >
                 <option value="">ALL STATUS</option>
                 <option value="lendo">READING</option>
-                <option value="proximo">NEXT</option>
                 <option value="na_fila">IN QUEUE</option>
                 <option value="lido">READ</option>
               </select>

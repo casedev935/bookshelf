@@ -200,21 +200,19 @@ exports.CategoryType = exports.$Enums.CategoryType = {
 exports.MovieStatus = exports.$Enums.MovieStatus = {
   assistido: 'assistido',
   na_fila: 'na_fila',
-  proximo: 'proximo'
+  assistindo: 'assistindo'
 };
 
 exports.BookStatus = exports.$Enums.BookStatus = {
   lido: 'lido',
   lendo: 'lendo',
-  na_fila: 'na_fila',
-  proximo: 'proximo'
+  na_fila: 'na_fila'
 };
 
 exports.SeriesStatus = exports.$Enums.SeriesStatus = {
   assistindo: 'assistindo',
   finalizada: 'finalizada',
-  na_fila: 'na_fila',
-  proximo: 'proximo'
+  na_fila: 'na_fila'
 };
 
 exports.Prisma.ModelName = {

@@ -55,7 +55,7 @@ export type CategoryType = (typeof CategoryType)[keyof typeof CategoryType]
 export const MovieStatus: {
   assistido: 'assistido',
   na_fila: 'na_fila',
-  proximo: 'proximo'
+  assistindo: 'assistindo'
 };
 
 export type MovieStatus = (typeof MovieStatus)[keyof typeof MovieStatus]
@@ -64,8 +64,7 @@ export type MovieStatus = (typeof MovieStatus)[keyof typeof MovieStatus]
 export const BookStatus: {
   lido: 'lido',
   lendo: 'lendo',
-  na_fila: 'na_fila',
-  proximo: 'proximo'
+  na_fila: 'na_fila'
 };
 
 export type BookStatus = (typeof BookStatus)[keyof typeof BookStatus]
@@ -74,8 +73,7 @@ export type BookStatus = (typeof BookStatus)[keyof typeof BookStatus]
 export const SeriesStatus: {
   assistindo: 'assistindo',
   finalizada: 'finalizada',
-  na_fila: 'na_fila',
-  proximo: 'proximo'
+  na_fila: 'na_fila'
 };
 
 export type SeriesStatus = (typeof SeriesStatus)[keyof typeof SeriesStatus]

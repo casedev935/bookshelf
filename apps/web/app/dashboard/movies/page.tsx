@@ -153,7 +153,7 @@ export default function MoviesPage() {
                 onChange={e => setFilterStatus(e.target.value)}
               >
                 <option value="">ALL STATUS</option>
-                <option value="proximo">NEXT</option>
+                <option value="assistindo">WATCHING</option>
                 <option value="assistido">WATCHED</option>
                 <option value="na_fila">IN QUEUE</option>
               </select>

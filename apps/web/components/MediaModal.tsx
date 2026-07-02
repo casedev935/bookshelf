@@ -201,10 +201,24 @@ export default function MediaModal({ isOpen, onClose, onSave, title, initialData
             <label className="text-sm font-bold font-mono">STATUS</label>
             <select className="neo-brutalist-input bg-white cursor-pointer font-sans" value={formData.status || 'na_fila'} onChange={e => setFormData({...formData, status: e.target.value})}>
               <option value="na_fila">NA FILA</option>
-              <option value="proximo">PRÓXIMO</option>
-              {!isMovie && !isSeries && <option value="lendo">LENDO</option>}
-              {isSeries && <option value="assistindo">ASSISTINDO</option>}
-              {isMovie ? <option value="assistido">ASSISTIDO</option> : isSeries ? <option value="finalizada">FINALIZADA</option> : <option value="lido">LIDO</option>}
+              {isMovie && (
+                <>
+                  <option value="assistindo">ASSISTINDO</option>
+                  <option value="assistido">ASSISTIDO</option>
+                </>
+              )}
+              {isSeries && (
+                <>
+                  <option value="assistindo">ASSISTINDO</option>
+                  <option value="finalizada">FINALIZADA</option>
+                </>
+              )}
+              {!isMovie && !isSeries && (
+                <>
+                  <option value="lendo">LENDO</option>
+                  <option value="lido">LIDO</option>
+                </>
+              )}
             </select>
           </div>
 

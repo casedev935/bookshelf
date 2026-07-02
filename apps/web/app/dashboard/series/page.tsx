@@ -133,7 +133,6 @@ export default function SeriesPage() {
               >
                 <option value="">ALL STATUS</option>
                 <option value="assistindo">WATCHING</option>
-                <option value="proximo">NEXT</option>
                 <option value="na_fila">IN QUEUE</option>
                 <option value="finalizada">FINISHED</option>
               </select>
